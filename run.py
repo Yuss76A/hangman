@@ -112,3 +112,14 @@ def ask_to_play_again():
         else:
             print("Invalid response. Please enter 'Y' for yes or 'N' for no.")
 
+def play_round(word):
+    """Conduct a single round of the Hangman game."""
+    masked_word = "_" * len(word)
+    has_guessed_correctly = False
+    guessed_chars = []
+    guessed_full_words = []
+    remaining_lives = 6
+
+    print(display_hangman(remaining_lives))
+    print(f"This word has {len(word)} letters.\n")
+    print(masked_word, "\n")
