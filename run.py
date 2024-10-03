@@ -15,3 +15,11 @@ def display_welcome_message():
     print("|| Enter a username to begin your quest!                         ||")
     print("=" * 66)
     print()
+
+    while True:
+        username = input("Please enter a username:").strip()
+        if username.isalpha() and 1 <= len(username) <= 10:
+            print(f"\nWelcome, {username}! Let's start the game!\n")
+            return username
+        else:
+            print("Username must contain 1 to 10 letters from the English alphabet.\n")
