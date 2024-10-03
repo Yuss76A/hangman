@@ -166,10 +166,14 @@ def play_round(word):
         print(f"Letters guessed so far: {guessed_chars}")
         print(f"Complete words guessed so far: {guessed_full_words}", "\n")
 
-    
     if has_guessed_correctly:
         print("Well done! You've successfully saved the hangman!\n")
     else:
         print(f"Oh no! You've run out of attempts. The word was '{word}'. Better luck next time.\n")
 
     ask_to_play_again()
+
+# Entry point of the script
+if __name__ == "__main__":
+    word = get_word()
+    play_round(word)
