@@ -23,3 +23,7 @@ def display_welcome_message():
             return username
         else:
             print("Username must contain 1 to 10 letters from the English alphabet.\n")
+
+def get_word():
+    """Select a random word from the imported word_list."""
+    return random.choice(word_list).upper()
