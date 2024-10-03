@@ -27,3 +27,72 @@ def display_welcome_message():
 def get_word():
     """Select a random word from the imported word_list."""
     return random.choice(word_list).upper()
+
+def display_hangman(tries):
+    """Return a string representation of the hangman for the current number of tries."""
+    stages = [
+        """
+           --------
+           |      |
+           |      O
+           |     \\|/
+           |      |
+           |     / \\
+           -
+        """,
+        """
+           --------
+           |      |
+           |      O
+           |     \\|/
+           |      |
+           |     / 
+           -
+        """,
+        """
+           --------
+           |      |
+           |      O
+           |     \\|/
+           |      |
+           |      
+           -
+        """,
+        """
+           --------
+           |      |
+           |      O
+           |     \\|
+           |      |
+           |     
+           -
+        """,
+        """
+           --------
+           |      |
+           |      O
+           |      |
+           |      |
+           |     
+           -
+        """,
+        """
+           --------
+           |      |
+           |      O
+           |    
+           |      
+           |     
+           -
+        """,
+        """
+           --------
+           |      |
+           |      
+           |    
+           |      
+           |     
+           -
+        """
+    ]
+    return stages[tries]
