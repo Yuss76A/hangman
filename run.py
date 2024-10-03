@@ -116,7 +116,8 @@ def play_round(word):
     """Conduct a single round of the Hangman game."""
     masked_word = "_" * len(word)
     has_guessed_correctly = False
-    guessed_chars = []
+    correct_guesses = []
+    incorrect_guesses = []
     guessed_full_words = []
     remaining_lives = 6
 
@@ -128,15 +129,15 @@ def play_round(word):
         suggestion = input("Enter your guess (letter or word): ").strip().upper()
 
         if len(suggestion) == 1 and suggestion.isalpha():
-            if suggestion in guessed_chars:
+            if suggestion in correct_guesses or suggestion in incorrect_guesses:
                 print(f"You've already guessed the letter '{suggestion}'. Try again.")
             elif suggestion not in word:
-                print(f"Unfortunately, '{suggestion}' is not in the word.")
-                remaining_lives -= 1
-                guessed_chars.append(suggestion)
+                    print(f"Unfortunately, '{suggestion}' is not in the word.")
+                    remaining_lives -= 1
+                    incorrect_guesses.append(suggestion)
             else:
                 print(f"Nice job! '{suggestion}' is present in the word.")
-                guessed_chars.append(suggestion)
+                correct_guesses.append(suggestion)
                 word_list = list(masked_word)
                 for idx, char in enumerate(word):
                     if char == suggestion:
@@ -163,8 +164,9 @@ def play_round(word):
         print(display_hangman(remaining_lives))
         print(f"The word contains {len(word)} letters.\n")
         print(masked_word, "\n")
-        print(f"Letters guessed so far: {guessed_chars}")
-        print(f"Complete words guessed so far: {guessed_full_words}", "\n")
+        print(f"Correct letters guessed: {', '.join(sorted(correct_guesses))}")
+        print(f"Incorrect letters guessed: {', '.join(sorted(incorrect_guesses))}")
+        print(f"Complete words guessed: {', '.join(guessed_full_words)}", "\n")
 
     if has_guessed_correctly:
         print("Well done! You've successfully saved the hangman!\n")
