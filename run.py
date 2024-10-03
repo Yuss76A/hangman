@@ -159,3 +159,9 @@ def play_round(word):
 
         else:
             print("Invalid input. Please guess either a single letter or the full word.")
+
+        print(display_hangman(remaining_lives))
+        print(f"The word contains {len(word)} letters.\n")
+        print(masked_word, "\n")
+        print(f"Letters guessed so far: {guessed_chars}")
+        print(f"Complete words guessed so far: {guessed_full_words}", "\n")
