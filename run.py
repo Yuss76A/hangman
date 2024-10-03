@@ -1,6 +1,7 @@
 import random
 from words import word_list
 
+
 def display_welcome_message():
     """Show a welcome message and request a valid username from the player."""
     print("=" * 66)
@@ -24,9 +25,11 @@ def display_welcome_message():
         else:
             print("Username must contain 1 to 10 letters from the English alphabet.\n")
 
+
 def get_word():
     """Select a random word from the imported word_list."""
     return random.choice(word_list).upper()
+
 
 def display_hangman(tries):
     """Return a string representation of the hangman for the current number of tries."""
@@ -97,6 +100,7 @@ def display_hangman(tries):
     ]
     return stages[tries]
 
+
 def ask_to_play_again():
     """Prompt the user for a new game and restart or exit based on response."""
     valid_response = False
@@ -111,6 +115,7 @@ def ask_to_play_again():
             exit()
         else:
             print("Invalid response. Please enter 'Y' for yes or 'N' for no.")
+
 
 def play_round(word):
     """Conduct a single round of the Hangman game."""
@@ -132,9 +137,9 @@ def play_round(word):
             if suggestion in correct_guesses or suggestion in incorrect_guesses:
                 print(f"You've already guessed the letter '{suggestion}'. Try again.")
             elif suggestion not in word:
-                    print(f"Unfortunately, '{suggestion}' is not in the word.")
-                    remaining_lives -= 1
-                    incorrect_guesses.append(suggestion)
+                print(f"Unfortunately, '{suggestion}' is not in the word.")
+                remaining_lives -= 1
+                incorrect_guesses.append(suggestion)
             else:
                 print(f"Nice job! '{suggestion}' is present in the word.")
                 correct_guesses.append(suggestion)
@@ -176,6 +181,8 @@ def play_round(word):
     ask_to_play_again()
 
 # Entry point of the script
+
+
 if __name__ == "__main__":
     word = get_word()
     play_round(word)
