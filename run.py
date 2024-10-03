@@ -145,3 +145,17 @@ def play_round(word):
                 
                 if "_" not in masked_word:
                     has_guessed_correctly = True
+
+        elif len(suggestion) == len(word) and suggestion.isalpha():
+            if suggestion in guessed_full_words:
+                print(f"You've already guessed the word '{suggestion}'. Try a different word.")
+            elif suggestion != word:
+                print(f"'{suggestion}' is not the correct word.")
+                remaining_lives -= 1
+                guessed_full_words.append(suggestion)
+            else:
+                has_guessed_correctly = True
+                masked_word = word
+
+        else:
+            print("Invalid input. Please guess either a single letter or the full word.")
