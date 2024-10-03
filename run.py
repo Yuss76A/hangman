@@ -123,3 +123,25 @@ def play_round(word):
     print(display_hangman(remaining_lives))
     print(f"This word has {len(word)} letters.\n")
     print(masked_word, "\n")
+
+    while not has_guessed_correctly and remaining_lives > 0:
+        suggestion = input("Enter your guess (letter or word): ").strip().upper()
+
+        if len(suggestion) == 1 and suggestion.isalpha():
+            if suggestion in guessed_chars:
+                print(f"You've already guessed the letter '{suggestion}'. Try again.")
+            elif suggestion not in word:
+                print(f"Unfortunately, '{suggestion}' is not in the word.")
+                remaining_lives -= 1
+                guessed_chars.append(suggestion)
+            else:
+                print(f"Nice job! '{suggestion}' is present in the word.")
+                guessed_chars.append(suggestion)
+                word_list = list(masked_word)
+                for idx, char in enumerate(word):
+                    if char == suggestion:
+                        word_list[idx] = suggestion
+                masked_word = "".join(word_list)
+                
+                if "_" not in masked_word:
+                    has_guessed_correctly = True
