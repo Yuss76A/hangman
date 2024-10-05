@@ -3,27 +3,32 @@ from words import word_list
 
 
 def display_welcome_message():
-    """Show a welcome message and request a valid username from the player."""
-    print("=" * 66)
-    print("|| Welcome to the Hangman Challenge!                             ||")
-    print("|| Your goal is to uncover the hidden word and save the stickman.||")
-    print("|| Guess one letter at a time, or attempt to guess the full word.||")
-    print("|| Each incorrect guess costs you a life and moves the stickman  ||")
-    print("|| closer to danger!                                             ||")
-    print("|| Use only letters from the English alphabet.                  ||")
-    print("|| If guessing a word, ensure it matches the length of the hidden||")
-    print("|| word.                                                        ||")
-    print("|| Enter a username to begin your quest!                         ||")
-    print("=" * 66)
-    print()
+    """
+    Display the game's introduction and obtain a valid username from the player.
+    Returns the validated username.
+    """
+    print("\n" + "*" * 70)
+    print("*  HANGMAN ADVENTURE: THE WORD QUEST                               *")
+    print("*" + "-" * 68 + "*")
+    print("*  Mission: Decode the secret word and rescue the stick figure!    *")
+    print("*  Rules of Engagement:                                            *")
+    print("*   - Guess letters or the entire word                             *")
+    print("*   - Each mistake brings the stick figure closer to peril         *")
+    print("*   - Use standard English letters only                            *")
+    print("*   - Full word guesses must match the secret word's length        *")
+    print("*" + "-" * 68 + "*")
+    print("*  Are you ready to begin your lexical journey?                    *")
+    print("*" * 70 + "\n")
 
     while True:
-        username = input("Please enter a username:").strip()
-        if username.isalpha() and 1 <= len(username) <= 10:
-            print(f"\nWelcome, {username}! Let's start the game!\n")
-            return username
+        print("Agent, your codename must be 1-10 letters long, English alphabet only.")
+        codename = input("Enter your secret agent codename: ").strip().capitalize()
+        
+        if codename.isalpha() and 1 <= len(codename) <= 10:
+            print(f"\nWelcome, Agent {codename}! Your word-saving mission starts now.\n")
+            return codename
         else:
-            print("Username must contain 1 to 10 letters from the English alphabet.\n")
+            print("Invalid codename. Stick to the protocol and try again.\n")
 
 
 def get_word():
@@ -184,5 +189,6 @@ def play_round(word):
 
 
 if __name__ == "__main__":
+    player_name = display_welcome_message()
     word = get_word()
     play_round(word)
