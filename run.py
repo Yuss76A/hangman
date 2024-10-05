@@ -15,6 +15,7 @@ def display_welcome_message():
     print("*   - Guess letters or the entire word                             *")
     print("*   - Each mistake brings the stick figure closer to peril         *")
     print("*   - Use standard English letters only                            *")
+    print("*   - The secret words are drawn from the world of espionage       *")
     print("*   - Full word guesses must match the secret word's length        *")
     print("*" + "-" * 68 + "*")
     print("*  Are you ready to begin your lexical journey?                    *")
