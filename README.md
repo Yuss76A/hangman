@@ -22,3 +22,8 @@ Upon successfully identifying the word, players will receive a congratulatory me
 If players run out of lives, the character will, unfortunately, be captured and hanged. A message of commiseration will be presented, along with an opportunity to try again.
 
 Players will also be reminded of any letters they have already guessed, prompting them to guess again without losing a life for repeated guesses.
+
+## Game Mechanics 
+A flowchart detailing the game's mechanics was designed using [draw.io](https://app.diagrams.net/ "draw.io"). Before diving into coding, I always draft a plan, sketching out the code structure, which is why I opted for the same method in my flowchart. You can view the flowchart by clicking the link below.
+
+[Game Flowchart](docs/flowchart/hangmandraw.png)
