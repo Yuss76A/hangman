@@ -27,3 +27,11 @@ Players will also be reminded of any letters they have already guessed, promptin
 A flowchart detailing the game's mechanics was designed using [draw.io](https://app.diagrams.net/ "draw.io"). Before diving into coding, I always draft a plan, sketching out the code structure, which is why I opted for the same method in my flowchart. You can view the flowchart by clicking the link below.
 
 [Game Flowchart](docs/flowchart/hangmandraw.png)
+
+## Features
+
+### Welcome Message 
+
+When the game loads, users will see a welcome message explaining the gameplay and instructions on how to start.
+
+![Welcome Message](docs/screenshots/welcome.png)
