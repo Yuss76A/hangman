@@ -74,3 +74,10 @@ As the game progresses, each correctly guessed letter will be revealed in the wo
 *Letters Guessed Incorrectly*<br>
 ![Letters Guessed Incorrectly](docs/screenshots/incorrectwordstrack.png)
 
+### List of Guessed Words
+
+If a player incorrectly guesses a word, it will be added to a list of incorrect word attempts. This list is displayed to the player, providing a clear record of unfruitful guesses, assisting in formulating future strategies, and preventing repeated attempts.
+
+*Word Guessed*<br>
+![Word Guessed](docs/screenshots/wrongword.png)
+
