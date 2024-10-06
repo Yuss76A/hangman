@@ -101,4 +101,10 @@ Upon finishing the game, players will receive a completion message that reflects
 *Failure Acknowledgment*<br>
 ![Failure Acknowledgment](docs/screenshots/failedmessage.png)
 
+### Replay Option
+
+After the game concludes, whether with a win or a loss, players are prompted to decide whether to play again by entering Y for yes or N for no. Input validation ensures that if a player enters any character other than Y or N, they receive an error message indicating invalid input. The game accommodates lowercase entries and full words such as "yes" or "no." It handles these by converting the first letter to uppercase for consistent processing.
+
+*Replay Option Validation*<br>
+![Replay Option Validation](docs/screenshots/restart.png)
 
