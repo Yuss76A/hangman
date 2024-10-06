@@ -81,3 +81,13 @@ If a player incorrectly guesses a word, it will be added to a list of incorrect 
 *Word Guessed*<br>
 ![Word Guessed](docs/screenshots/wrongword.png)
 
+### Guess Validation 
+
+If a player attempts to guess multiple letters and the length of the guess does not match the length of the word, an error message will notify them that the guess is invalid. Similarly, if a player submits a character not from the standard English alphabet, they will receive a notification that their input is not valid. These alerts help maintain the integrity of gameplay by ensuring all guesses align with the game's rules.
+
+*Incorrect Word Length Validation*<br>
+![Incorrect Length Guess](docs/screenshots/incorrectword.png)
+
+*Incorrect Character Guess*<br>
+![Incorrect Character Guess](docs/screenshots/invalidinput.png)
+
