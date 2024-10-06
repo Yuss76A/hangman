@@ -91,3 +91,14 @@ If a player attempts to guess multiple letters and the length of the guess does 
 *Incorrect Character Guess*<br>
 ![Incorrect Character Guess](docs/screenshots/invalidinput.png)
 
+### Game Outcome Notification
+
+Upon finishing the game, players will receive a completion message that reflects the outcome of their gameplay. This message will either celebrate their success with a congratulatory note if they guessed the word correctly or provide a commiseratory remark if they did not succeed, encouraging them to improve and try again. The completion message serves as a closing interaction, summarizing the player's gaming experience.
+
+*Congratulatory Message*<br>
+![Congratulatory Message](docs/screenshots/guessedword.png)
+
+*Failure Acknowledgment*<br>
+![Failure Acknowledgment](docs/screenshots/failedmessage.png)
+
+
