@@ -35,3 +35,19 @@ A flowchart detailing the game's mechanics was designed using [draw.io](https://
 When the game loads, users will see a welcome message explaining the gameplay and instructions on how to start.
 
 ![Welcome Message](docs/screenshots/welcome.png)
+
+### Username Promtp
+
+#### Agent Name Requirements (Username):
+
+* The name must be between 1 and 10 characters in length.
+
+* Only letters from the standard English alphabet are allowed—no numbers, spaces, or special characters.
+
+If a player attempts to enter an invalid agent name, they will receive an error message explaining the issue and prompting them to enter a valid name. Once a compliant agent name is provided, the game will proceed, immersing the player in the espionage-themed challenge. This step ensures that each player starts with a unique and valid identifier, enhancing both personalization and the thematic experience of the game.
+
+*Username Input*<br>
+![Username Input](docs/screenshots/userinput.png)
+
+*Username Input*<br>
+![Username Validation](docs/screenshots/user.png)
