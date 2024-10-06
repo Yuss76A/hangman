@@ -61,3 +61,16 @@ At the start of the game, players will see the empty gallows, setting the stage 
 
 *Incorrect Guess*<br>
 ![Incorrect Guesses](docs/screenshots/incorrectguesses.png)
+
+### Word
+
+A word will be randomly selected from a carefully curated list of espionage-themed words. Each letter of the chosen word will initially be masked by an **_** symbol. As players correctly guess letters, these symbols will be replaced with the guessed letters in their respective positions within the word. This process continues until the word is fully revealed or the player runs out of attempts.
+
+As the game progresses, each correctly guessed letter will be revealed in the word, while incorrectly guessed letters or words will be noted separately. All correct and incorrect guesses will be cataloged in their respective sections, allowing players to keep track of their progress and previously attempted guesses. This feature helps players strategize and avoid repeating mistakes.
+
+*Letters Guessed Correctly*<br>
+![Letters Guessed Correctly](docs/screenshots/correctlyguessed.png)
+
+*Letters Guessed Incorrectly*<br>
+![Letters Guessed Incorrectly](docs/screenshots/incorrectwordstrack.png)
+
