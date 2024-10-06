@@ -51,3 +51,13 @@ If a player attempts to enter an invalid agent name, they will receive an error 
 
 *Username Input*<br>
 ![Username Validation](docs/screenshots/user.png)
+
+### Hangman Gallows
+
+At the start of the game, players will see the empty gallows, setting the stage for the espionage-themed challenge. As players make incorrect guesses, the gallows will progressively reveal elements of the agent being captured and hanged. When the player exhausts all allowed attempts, the complete rendering of the captured and hanged agent will be displayed, indicating the end of the game.
+
+*Start of Game*<br>
+![Start of Game](docs/screenshots/start.png)
+
+*Incorrect Guess*<br>
+![Incorrect Guesses](docs/screenshots/incorrectguesses.png)
