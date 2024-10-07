@@ -191,3 +191,14 @@ This project was deployed on [Heroku](https://www.heroku.com "Heroku") using the
 4. Switch to the Settings tab.
 5. To employ the CodeInstitute's mock terminal setup, you need to add a configuration variable. Do this by clicking on Reveal Config Vars, entering PORT as the key, and 8000 as the value.
 6. Select Add Buildpack and include the Python and NodeJS packs in that sequence. Ensure Python is on top and NodeJS is below it upon completion.
+
+#### Deploying from a Github Repository
+
+1. Go to the Deploy tab.
+2. Choose GitHub - Connect as your deployment method and log in to link your GitHub account when prompted.
+3. Select your GitHub account from the dropdown if it's not already selected.
+4. Look for the repository you wish to deploy, and click Connect next to the desired repository in the search results.
+5. Further down the Deploy tab, you will find options for Automatic Deploys and Manual Deploy. Enabling automatic deploys allows Heroku to update your app whenever changes are made to your GitHub repository.
+6. Decide on a deployment method and select the branch you wish to deploy from.
+7. If opting for Automatic Deploys, click Enable Automatic Deploys. If choosing Manual Deploy, click Deploy Branch.
+8. Heroku will begin the deployment process. Once completed, you'll receive a confirmation message stating Your app was successfully deployed, along with a button to view your live application.
