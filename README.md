@@ -178,3 +178,16 @@ Therefore, we want to assure our players that we will remain vigilant and contin
 Our commitment to delivering a seamless and enjoyable Hangman experience is unwavering. We have carefully implemented all the features and mechanics you would expect in a classic Hangman game, and we are confident that the game functions as intended. But we also recognize that software is a living, evolving entity, and we will remain dedicated to maintaining the highest standards of quality and responsiveness to any concerns that may arise.
 
 Rest assured, agents, that we will continue to closely monitor the Hangman game and address any bugs or issues that may surface in the future. Your satisfaction and the integrity of the game experience are of the utmost importance to us.
+
+## Development and Deployment
+
+### Deployment
+
+This project was deployed on [Heroku](https://www.heroku.com "Heroku") using the steps outlined below.
+
+1. Visit the Heroku website and either register for an account or log in if you already have one.
+2. Go to your dashboard, choose New, and then select Create New App.
+3. Enter a distinct name for your application, pick your region, and click Create app.
+4. Switch to the Settings tab.
+5. To employ the CodeInstitute's mock terminal setup, you need to add a configuration variable. Do this by clicking on Reveal Config Vars, entering PORT as the key, and 8000 as the value.
+6. Select Add Buildpack and include the Python and NodeJS packs in that sequence. Ensure Python is on top and NodeJS is below it upon completion.
