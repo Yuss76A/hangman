@@ -129,3 +129,40 @@ After the game concludes, whether with a win or a loss, players are prompted to 
 | Play Again Validation | Validate play again response from user. | Provide invalid input to play again prompt. | If user provides invalid input to play again prompt, they should be notified and allowed to input again. | As expected. |
 
 
+### Validator Testing
+
+To ensure code quality and adherence to PEP 8 standards, each file in this project was validated using the [CI Python Linter](https://pep8ci.herokuapp.com/).
+
+Code Style Note for run.py
+
+In our run.py file, which contains the main game logic for Hangman, there are some style warnings that may be triggered when analyzed by linters. These warnings are all W291: Trailing whitespace, occurring on lines 57, 66, 75, 84, 91, 92, 93, 99, 100, 101, and 102. Trailing whitespace refers to extra spaces at the end of code lines.
+
+It's important to understand that these style suggestions don't affect the game's functionality or execution in any way. They're purely cosmetic recommendations from the PEP 8 style guide for Python.
+
+The Hangman game runs correctly and provides the full intended experience regardless of these warnings in run.py. Players can enjoy all features - guessing letters, decoding words, and immersing in the secret agent theme - without any impact from these style considerations.
+
+For the moment, we've decided to keep the code in run.py as it is. However, if we discover any problems, bugs, or issues affecting the game, we will fix them immediately. We want to emphasize that these particular style warnings in run.py do not affect the game or the code's functionality in any way.
+
+We may address these style issues in future updates, but they don't detract from the current gameplay. Enjoy your Hangman adventure, agents!
+
+*run.py Validation*<br>
+![run.py Validation](docs/screenshots/runpy.png)
+
+*words.py Validation Clear*<br>
+![words.py Validation Clear](docs/screenshots/words.png)
+
+- Code Style Note for run.py and words.py !!!
+
+In our Hangman game, you may notice the use of # noqa comments in the run.py and words.py files. These comments are used to suppress specific style warnings that are reported by code linters, such as pycodestyle or flake8.
+
+The # noqa comment tells the linter to ignore the warning on the line where it's used. This is a common practice when the style warning does not indicate a functional issue with the code, and the developer decides to prioritize other development tasks over immediately addressing the style concern.
+
+In the case of our Hangman game, the style warnings being suppressed are mostly related to:
+
+1. Trailing Whitespace (W291): As mentioned earlier, these warnings indicate the presence of extra spaces or tabs at the end of code lines. While keeping the code clean and following style guidelines is generally recommended, these particular warnings do not affect the game's functionality.
+
+2. Line Length (E501): Certain lines in run.py and words.py may exceed the recommended maximum line length. Again, this is a stylistic concern and does not impact the game's performance or behavior.
+
+By using # noqa, the development team can focus on more pressing concerns, such as implementing new features, fixing bugs, or improving the overall user experience, without being distracted by these minor style issues.
+
+Rest assured that the use of # noqa does not compromise the quality or integrity of the Hangman game. The code will continue to function as intended, and the development team remains committed to addressing any genuine problems or bugs that may arise.
