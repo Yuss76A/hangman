@@ -127,6 +127,7 @@ def play_round(word):
     score = 0  
     points_per_letter = 5  
     points_per_word = 20
+    penalty_points = 5
 
     masked_word = "_" * len(word)
     has_guessed_correctly = False
@@ -149,6 +150,11 @@ def play_round(word):
                 print(f"Unfortunately, '{suggestion}' is not in the word.")
                 remaining_lives -= 1
                 incorrect_guesses.append(suggestion)
+                if score >= penalty_points:
+                    score -= penalty_points
+                    print(f"Incorrect letter guess! {penalty_points} points deducted.")
+                else:
+                    print("Incorrect letter guess! Not enough points to deduct.")
             else:
                 print(f"Nice job! '{suggestion}' is present in the word.")
                 correct_guesses.append(suggestion)
@@ -168,6 +174,12 @@ def play_round(word):
                 print(f"'{suggestion}' is not the correct word.")
                 remaining_lives -= 1
                 guessed_full_words.append(suggestion)
+                if score >= penalty_points:
+                    score -= penalty_points
+                    print(f"Incorrect full word guess! {penalty_points} points deducted.")
+                else:
+                    print("Incorrect full word guess! Not enough points to deduct.")
+                print(f"Score after deduction: {score}")
             else:
                 has_guessed_correctly = True
                 masked_word = word
