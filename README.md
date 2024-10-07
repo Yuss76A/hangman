@@ -207,3 +207,13 @@ This project was deployed on [Heroku](https://www.heroku.com "Heroku") using the
 
 * The **requests** library was utilized in the game, with words carefully crafted around an espionage theme to enhance the immersive experience.
 * The **random** module was used to select words unpredictably from the list of options.
+
+## Credits
+
+- [CodeInstitute](https://codeinstitute.net/ "Code Institute") I am deeply grateful to the Code Institute and its dynamic Slack community of tutors and mentors. Your ongoing support, expert guidance, and encouragement have been vital to my educational journey and the successful completion of this project. Your commitment has greatly enhanced my learning experience.
+
+- I would also like to express my gratitude to my amazing wife Fatty and my little brother Mett for their invaluable testing and feedback.
+
+- A big thank you to my mentor, [Iuliia Konovalova](https://github.com/IuliiaKonovalova), for her guidance and support throughout this project. Your mentorship made all the difference!
+
+- [GitHub](https://github.com/) A sincere acknowledgment to the creators of GitHub. Their platform has transformed the way we collaborate and learn in coding, serving as more than just a tool—it has been a key driver in my growth as a developer.

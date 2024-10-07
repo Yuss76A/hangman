@@ -124,6 +124,10 @@ def ask_to_play_again():
 
 def play_round(word):
     """Conduct a single round of the Hangman game."""
+    score = 0  
+    points_per_letter = 5  
+    points_per_word = 20
+
     masked_word = "_" * len(word)
     has_guessed_correctly = False
     correct_guesses = []
@@ -148,6 +152,7 @@ def play_round(word):
             else:
                 print(f"Nice job! '{suggestion}' is present in the word.")
                 correct_guesses.append(suggestion)
+                score += points_per_letter
                 word_list = list(masked_word)
                 for idx, char in enumerate(word):
                     if char == suggestion:
@@ -166,6 +171,7 @@ def play_round(word):
             else:
                 has_guessed_correctly = True
                 masked_word = word
+                score += points_per_word
 
         else:
             print("Invalid input. Please guess either a single letter or the full word.")  # noqa
@@ -176,18 +182,21 @@ def play_round(word):
         print(f"Correct letters guessed: {', '.join(sorted(correct_guesses))}")
         print(f"Incorrect letters guessed: {', '.join(sorted(incorrect_guesses))}")  # noqa
         print(f"Complete words guessed: {', '.join(guessed_full_words)}", "\n")
+        print(f"Current Score: {score}")
 
     if has_guessed_correctly:
         print("Well done! You've successfully saved the hangman!\n")
     else:
         print(f"Oh no! You've run out of attempts. The word was '{word}'. Better luck next time.\n")  # noqa
-
+        
     ask_to_play_again()
 
 # Entry point of the script
 
 
 if __name__ == "__main__":
-    player_name = display_welcome_message()
-    word = get_word()
-    play_round(word)
+    while display_welcome_message():
+        word = get_word()
+        play_round(word)
+    print("Thanks for playing!")
+
