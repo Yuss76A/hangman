@@ -202,3 +202,8 @@ This project was deployed on [Heroku](https://www.heroku.com "Heroku") using the
 6. Decide on a deployment method and select the branch you wish to deploy from.
 7. If opting for Automatic Deploys, click Enable Automatic Deploys. If choosing Manual Deploy, click Deploy Branch.
 8. Heroku will begin the deployment process. Once completed, you'll receive a confirmation message stating Your app was successfully deployed, along with a button to view your live application.
+
+## Libraries Used
+
+* The **requests** library was utilized in the game, with words carefully crafted around an espionage theme to enhance the immersive experience.
+* The **random** module was used to select words unpredictably from the list of options.
