@@ -127,6 +127,8 @@ def display_welcome_message():
         "*  HANGMAN ADVENTURE: THE WORD QUEST                               *\n"
         "*" + "-" * 68 + "*\n"
         "*  Mission: Decode the secret word and rescue the stick figure!    *\n"
+        "*  Agent 003 is compromised. His life depends on your skills.      *\n"
+        "*  His fate is in your knowledge.                                  *\n"
         "*  Rules of Engagement:                                            *\n"
         "*   - Guess letters or the entire word                             *\n"
         "*   - Each mistake brings the stick figure closer to peril         *\n"
