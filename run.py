@@ -2,6 +2,7 @@ import random
 from words import word_list
 import os
 import time
+import sys
 
 def clear_screen():
     """
@@ -9,6 +10,15 @@ def clear_screen():
     Uses 'cls' command for Windows and 'clear' for Unix-based systems.
     """
     os.system('cls' if os.name == 'nt' else 'clear')
+
+
+def typewriter_effect(text, delay=0.01):
+    """Simulates a typewriter effect for the given text."""
+    for char in text:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+    print()
 
 
 def walk_out():
@@ -112,25 +122,29 @@ def display_welcome_message():
     Display the game's introduction and obtain a valid username from the player.  # noqa
     Returns the validated username.
     """
-    print("\n" + "*" * 70)
-    print("*  HANGMAN ADVENTURE: THE WORD QUEST                               *")  # noqa
-    print("*" + "-" * 68 + "*")
-    print("*  Mission: Decode the secret word and rescue the stick figure!    *")  # noqa
-    print("*  Rules of Engagement:                                            *")  # noqa
-    print("*   - Guess letters or the entire word                             *")  # noqa
-    print("*   - Each mistake brings the stick figure closer to peril         *")  # noqa
-    print("*   - Use standard English letters only                            *")  # noqa
-    print("*   - The secret words are drawn from the world of espionage       *")  # noqa
-    print("*   - Full word guesses must match the secret word's length        *")  # noqa
-    print("*" + "-" * 68 + "*")
-    print("*  Are you ready to begin your lexical journey?                    *")  # noqa
-    print("*" * 70 + "\n")
+    message = (
+        "\n" + "*" * 70 + "\n"
+        "*  HANGMAN ADVENTURE: THE WORD QUEST                               *\n"
+        "*" + "-" * 68 + "*\n"
+        "*  Mission: Decode the secret word and rescue the stick figure!    *\n"
+        "*  Rules of Engagement:                                            *\n"
+        "*   - Guess letters or the entire word                             *\n"
+        "*   - Each mistake brings the stick figure closer to peril         *\n"
+        "*   - Use standard English letters only                            *\n"
+        "*   - The secret words are drawn from the world of espionage       *\n"
+        "*   - Full word guesses must match the secret word's length        *\n"
+        "*" + "-" * 68 + "*\n"
+        "*  Are you ready to begin your lexical journey?                    *\n"
+        
+    )
+    
+    typewriter_effect(message, delay=0.01)
 
     while True:
         print("Agent, your codename must be 1-10 letters long, English alphabet only.")  # noqa
         codename = input("Enter your secret agent codename: ").strip().capitalize()  # noqa
         if codename.isalpha() and 1 <= len(codename) <= 10:
-            print(f"\nWelcome, Agent {codename}! Your word-saving mission starts now.\n")  # noqa
+            typewriter_effect(f"\nWelcome, Agent {codename}! Your word-saving mission starts now.\n", delay=0.01)  # noqa
             return codename
         else:
             print("Invalid codename. Stick to the protocol and try again.\n")
@@ -320,7 +334,9 @@ def play_round(word):
 
 
 if __name__ == "__main__":
-    while display_welcome_message():
+    codename = display_welcome_message()
+    
+    while True:
         word = get_word()
         play_round(word)
     print("Thanks for playing!")
