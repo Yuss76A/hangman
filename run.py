@@ -251,7 +251,7 @@ def play_round(word):
     points_per_word = 20
     penalty_points = 5
 
-    masked_word = "_" * len(word)
+    masked_word = ["_" for _ in word]
     has_guessed_correctly = False
     correct_guesses = []
     incorrect_guesses = []
@@ -260,7 +260,7 @@ def play_round(word):
 
     print(display_hangman(remaining_lives))
     print(f"This word has {len(word)} letters.\n")
-    print(masked_word, "\n")
+    print(" ".join(masked_word), "\n")
 
     while not has_guessed_correctly and remaining_lives > 0:
         suggestion = input("Enter your guess (letter or word): ").strip().upper()  # noqa
@@ -304,7 +304,7 @@ def play_round(word):
                 print(f"Score after deduction: {score}")
             else:
                 has_guessed_correctly = True
-                masked_word = word
+                masked_word = list(word)
                 score += points_per_word
 
         else:
@@ -312,7 +312,7 @@ def play_round(word):
 
         print(display_hangman(remaining_lives))
         print(f"The word contains {len(word)} letters.\n")
-        print(masked_word, "\n")
+        print(" ".join(masked_word), "\n")
         print(f"Correct letters guessed: {', '.join(sorted(correct_guesses))}")
         print(f"Incorrect letters guessed: {', '.join(sorted(incorrect_guesses))}")  # noqa
         print(f"Complete words guessed: {', '.join(guessed_full_words)}", "\n")
