@@ -114,7 +114,7 @@ def fall_from_tree():
         clear_screen()
         print(stage)
         time.sleep(0.5)
-    print("You had one job, and the echoes of my silence are your reminder. You failed to save me, Agent.")
+    print("You failed to save me, Agent.")
 
 
 def display_welcome_message():
@@ -323,7 +323,7 @@ def play_round(word):
         walk_out()
         time.sleep(2)
     else:
-        print(f"You had one job, and the echoes of my silence are your reminder. The word was '{word}'. Better luck next time.\n")  # noqa
+        print(f"You failed, Agent. This failure runs deep. The word was '{word}'. Better luck next time.\n")  # noqa
         time.sleep(3)
 
         fall_from_tree()
