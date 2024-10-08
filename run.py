@@ -20,12 +20,16 @@ def walk_out():
         " /|\\ ",
         " / \\ "
     ]
+    screen_width = os.get_terminal_size().columns
     for i in range(20):
         clear_screen()
         for line in hangman:
-            print(" " * i + line)
+            print(" " * int((screen_width - len(line)) / 2) + line)
         time.sleep(0.1)
-    print("The hangman has been saved and walked away!")
+
+    success_message = "The secret agent 003 was saved! Good job, agent!"
+    print(" " * int((screen_width - len(success_message)) / 2) + success_message)
+    
 
 
 def fall_from_tree():
