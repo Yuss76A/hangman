@@ -20,7 +20,6 @@ def walk_out():
         " /|\\ ",
         " / \\ "
     ]
-    screen_width = os.get_terminal_size().columns
     for i in range(20):
         clear_screen()
         for line in hangman:
