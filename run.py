@@ -10,26 +10,39 @@ def clear_screen():
     """
     os.system('cls' if os.name == 'nt' else 'clear')
 
+
 def walk_out():
-    """
-    Animate the hangman walking out of the scene.
-    Displays a simple ASCII animation of the hangman moving to the right.
-    """
     hangman = [
         "  O  ",
         " /|\\ ",
         " / \\ "
     ]
-    for i in range(20):
+    screen_width = os.get_terminal_size().columns
+    screen_height = os.get_terminal_size().lines
+
+    # Calculate the starting and ending positions for the hangman
+    start_x = 0
+    start_y = int(screen_height / 2) - 2
+    end_x = screen_width - len(hangman[0])
+    end_y = int(screen_height / 2) - 2
+
+    for i in range(screen_width // len(hangman[0])):
         clear_screen()
-        for line in hangman:
-            print(" " * int((screen_width - len(line)) / 2) + line)
-        time.sleep(0.1)
 
-    success_message = "The secret agent 003 was saved! Good job, agent!"
-    print(" " * int((screen_width - len(success_message)) / 2) + success_message)
+        # Display the success message above the hangman
+        success_message = "The secret agent 003 was saved! Good job, agent!"
+        print("\033[{};{}H{}".format(start_y - 2, int(screen_width / 2) - len(success_message) // 2, success_message))
+
+        # Display the moving hangman
+        for j, line in enumerate(hangman):
+            print("\033[{};{}H{}".format(start_y + j, start_x, line))
+        time.sleep(0.3)
+
+        # Move the hangman towards the end position
+        start_x += len(hangman[0])
+        if start_x > end_x:
+            break
     
-
 
 def fall_from_tree():
     """
@@ -91,7 +104,7 @@ def fall_from_tree():
         clear_screen()
         print(stage)
         time.sleep(0.5)
-    print("Oh no! The hangman has fallen!")
+    print("You had one job, and the echoes of my silence are your reminder. You failed to save me, Agent.")
 
 
 def display_welcome_message():
@@ -294,10 +307,12 @@ def play_round(word):
     if has_guessed_correctly:
         print("Well done! You've successfully saved the hangman!\n")
         walk_out()
-    else:
-        print(f"Oh no! You've run out of attempts. The word was '{word}'. Better luck next time.\n")  # noqa
-        fall_from_tree()
         time.sleep(2)
+    else:
+        print(f"You had one job, and the echoes of my silence are your reminder. The word was '{word}'. Better luck next time.\n")  # noqa
+        time.sleep(3)
+
+        fall_from_tree()
 
     ask_to_play_again()
 
