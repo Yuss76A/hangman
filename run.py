@@ -1,5 +1,94 @@
 import random
 from words import word_list
+import os
+import time
+
+def clear_screen():
+    """
+    Clear the console screen.
+    Uses 'cls' command for Windows and 'clear' for Unix-based systems.
+    """
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+def walk_out():
+    """
+    Animate the hangman walking out of the scene.
+    Displays a simple ASCII animation of the hangman moving to the right.
+    """
+    hangman = [
+        "  O  ",
+        " /|\\ ",
+        " / \\ "
+    ]
+    for i in range(20):
+        clear_screen()
+        for line in hangman:
+            print(" " * i + line)
+        time.sleep(0.1)
+    print("The hangman has been saved and walked away!")
+
+
+def fall_from_tree():
+    """
+    Animate the hangman falling from the tree.
+    Displays a series of ASCII frames showing the hangman's descent.
+    """
+
+    stages = [
+        """
+           --------
+           |      |
+           |      O
+           |     \\|/
+           |      |
+           |     / \\
+           -
+        """,
+        """
+           --------
+           |      
+           |      O
+           |     \\|/
+           |      |
+           |     / \\
+           -
+        """,
+        """
+           --------
+           |      
+           |      
+           |      O
+           |     \\|/
+           |      |
+           -     / \\
+        """,
+        """
+           --------
+           |      
+           |      
+           |      
+           |      O
+           |     \\|/
+           -      |
+                 / \\
+        """,
+        """
+           --------
+           |      
+           |      
+           |      
+           |      
+           |      O
+           -     \\|/
+                  |
+                 / \\
+        """
+    ]
+    for stage in stages:
+        clear_screen()
+        print(stage)
+        time.sleep(0.5)
+    print("Oh no! The hangman has fallen!")
 
 
 def display_welcome_message():
@@ -123,7 +212,10 @@ def ask_to_play_again():
 
 
 def play_round(word):
-    """Conduct a single round of the Hangman game."""
+    """Conduct a single round of the Hangman game.
+    This function manages the game logic, including user input,
+    score tracking, and game state updates.
+    """
     score = 0  
     points_per_letter = 5  
     points_per_word = 20
@@ -152,9 +244,9 @@ def play_round(word):
                 incorrect_guesses.append(suggestion)
                 if score >= penalty_points:
                     score -= penalty_points
-                    print(f"Incorrect letter guess! {penalty_points} points deducted.")
+                    print(f"Incorrect letter guess! {penalty_points} points deducted.")  # noqa
                 else:
-                    print("Incorrect letter guess! Not enough points to deduct.")
+                    print("Incorrect letter guess! Not enough points to deduct.")  # noqa
             else:
                 print(f"Nice job! '{suggestion}' is present in the word.")
                 correct_guesses.append(suggestion)
@@ -176,9 +268,9 @@ def play_round(word):
                 guessed_full_words.append(suggestion)
                 if score >= penalty_points:
                     score -= penalty_points
-                    print(f"Incorrect full word guess! {penalty_points} points deducted.")
+                    print(f"Incorrect full word guess! {penalty_points} points deducted.")  # noqa
                 else:
-                    print("Incorrect full word guess! Not enough points to deduct.")
+                    print("Incorrect full word guess! Not enough points to deduct.")  # noqa
                 print(f"Score after deduction: {score}")
             else:
                 has_guessed_correctly = True
@@ -198,9 +290,12 @@ def play_round(word):
 
     if has_guessed_correctly:
         print("Well done! You've successfully saved the hangman!\n")
+        walk_out()
     else:
         print(f"Oh no! You've run out of attempts. The word was '{word}'. Better luck next time.\n")  # noqa
-        
+        fall_from_tree()
+        time.sleep(2)
+
     ask_to_play_again()
 
 # Entry point of the script
@@ -211,4 +306,3 @@ if __name__ == "__main__":
         word = get_word()
         play_round(word)
     print("Thanks for playing!")
-
