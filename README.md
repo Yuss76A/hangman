@@ -261,6 +261,9 @@ This project was deployed on [Heroku](https://www.heroku.com "Heroku") using the
 
 * The **requests** library was utilized in the game, with words carefully crafted around an espionage theme to enhance the immersive experience.
 * The **random** module was used to select words unpredictably from the list of options.
+* The **os** module was employed to manage console interactions, allowing the screen to be cleared dynamically for a cleaner game interface.
+* The **time** module was used to control timing, creating delays for animations and effects to enhance user engagement.
+* The **sys** module facilitated output manipulation, enabling text to display gradually for a typewriter effect, enriching the visual experience.
 
 ## Credits
 
