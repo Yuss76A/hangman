@@ -108,6 +108,28 @@ After the game concludes, whether with a win or a loss, players are prompted to 
 *Replay Option Validation*<br>
 ![Replay Option Validation](docs/screenshots/restart.png)
 
+### Scoring for Motivation
+
+1. Purpose of the Scoring System:
+
+- The scoring system is designed as a motivational tool to enhance player engagement and enjoyment. It provides immediate feedback on performance and serves as a measure of progress throughout each individual game. Note that the points are temporary and do not persist beyond the current game session.
+
+2. Mechanics:
+
+- Correct Guesses: Each correct letter guessed earns the player points, bringing them closer to their goal of saving the agent. This positive reinforcement encourages players to think carefully about their choices and rewards successful strategies.
+Incorrect Guesses: With each incorrect guess, points are deducted, reflecting the increasing peril of the agent. This adds an element of challenge and urgency, motivating players to improve their guessing accuracy.
+
+3. Narrative Integration:
+
+- The points system ties into the game's narrative by simulating the urgency of the mission. Each point gained or lost reflects the agent's journey towards safety or danger, adding depth to the game's stakes.
+
+4. Enjoyment and Motivation:
+
+- While the points don't persist beyond a single game session, they serve as a fun challenge and personal achievement tracker. There is no system for maintaining scores between games or creating a leaderboard. They offer players a sense of accomplishment with each successful guess and emphasize the importance of each decision during play.
+
+*Scoring for Motivation*<br>
+![Scoring for Motivation](docs/screenshots/points.png)
+
 ### Testing 
 
 | Feature Tested | Feature Description | Testing Completed | Expected Outcome | Result |
