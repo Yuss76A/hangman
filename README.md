@@ -34,6 +34,26 @@ A flowchart detailing the game's mechanics was designed using [draw.io](https://
 
 When the game loads, users will see a welcome message explaining the gameplay and instructions on how to start.
 
+The welcome message for "Hangman Adventure: The Word Quest" immerses players into an exciting narrative of word-solving and espionage. Framed by a decorative border, it sets an adventurous tone right from the start with a well-structured format, drawing players into the game's challenge.
+
+The introductory exposition presents the player with a mission: to decode the secret word and rescue the stick figure, known as Agent 003. This introduction not only establishes the game's main objective but also integrates a narrative element, elevating the player's role from mere participant to crucial savior. Agent 003 is in a precarious situation; his fate is significantly tied to the player's ability to solve the puzzles.
+
+Crucially, the message includes a motivational phrase: "Each correct guess brings you closer to saving the agent, while every mistake deepens their peril—their very survival depends on you." This line serves to enhance the stakes of each decision, making it clear that every action, whether successful or not, has direct consequences on the agent's survival. This ties deeply into the game's plot, promoting careful consideration and strategic thinking.
+
+The welcome message continues by outlining the gameplay rules, known as the "Rules of Engagement," to guide the player’s actions within the game:
+
+* Guessing Mechanics: Players are allowed to guess individual letters or attempt the entire word, which adds strategic depth.
+
+* Consequences of Mistakes: Incorrect guesses bring the stick figure perilously closer to a dire fate, building tension and urgency.
+
+* Letter Restrictions: The game requires that guesses use only standard English letters, ensuring clarity.
+
+* Thematic Words: The choice of words is inspired by espionage, subtly shaping the game's backdrop and maintaining thematic consistency.
+
+* Word Length Requirement: Any attempt to guess the entire word must match the length of the secret word exactly.
+
+Finally, it prompts the player with an invitation to start: "Are you ready to begin your lexical journey?" This query not only appeals to their sense of adventure but also reinforces their integral role in the forthcoming challenge. The typewriter effect used in displaying the message further engages the player, evoking a sense of mystery and nostalgia reminiscent of classic spy movies, enhancing the overall atmosphere of secrecy and suspense.
+
 ![Welcome Message](docs/screenshots/welcome.png)
 
 ### Username Promtp
