@@ -157,6 +157,13 @@ Incorrect Guesses: With each incorrect guess, points are deducted, reflecting th
 *Scoring for Motivation*<br>
 ![Scoring for Motivation](docs/screenshots/scoringpoints.png)
 
+### Life Bar
+
+The life bar in "Hangman Adventure: The Word Quest" begins at 100% and decreases with each incorrect guess. This visual representation of remaining attempts adds urgency to the game, challenging players to choose their guesses wisely. As the life bar approaches zero, the tension mounts, emphasizing the critical nature of each decision in the mission to save Agent 003.
+
+*Life Bar*<br>
+![Life Bar](docs/screenshots/lifebar.png)
+
 ### Testing 
 
 | Feature Tested | Feature Description | Testing Completed | Expected Outcome | Result |
