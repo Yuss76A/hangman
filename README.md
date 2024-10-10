@@ -271,3 +271,5 @@ This project was deployed on [Heroku](https://www.heroku.com "Heroku") using the
 - A big thank you to my mentor, [Iuliia Konovalova](https://github.com/IuliiaKonovalova), for her guidance and support throughout this project. Your mentorship made all the difference!
 
 - [GitHub](https://github.com/) A sincere acknowledgment to the creators of GitHub. Their platform has transformed the way we collaborate and learn in coding, serving as more than just a tool—it has been a key driver in my growth as a developer.
+
+- The initial idea and basic understanding for this classic Hangman game were inspired by a tutorial from the YouTube channel [Kite](https://www.youtube.com/@KiteHQ). This tutorial, which can be viewed here [tutorial](https://www.youtube.com/watch?v=m4nEnsavl6w&t=463s&ab_channel=Kite).
