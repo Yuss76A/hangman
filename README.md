@@ -7,21 +7,19 @@ In this game, players will be challenged to figure out a randomly chosen word. T
 [View live project here.](https://hangman-ys-2df0aca42caa.herokuapp.com/)
 
 ## How to play
-Initially, players will be prompted to enter their name, which will start the game.
+The game begins by prompting players to enter their codename, commencing the immersive mission narrative presented in the welcome message.
 
-A word related to espionage will be randomly selected, with each letter represented by an **_** symbol, revealing the total number of letters in the word.
+A word related to espionage is randomly selected, with underscores (_) indicating each letter, revealing the total letters to players.
 
-Players will then be asked to enter a letter or attempt to guess the entire word.
+Players guess letters or the entire word, aiming to decode the secret word and rescue Agent 003. Ensure that guesses meet English alphabet criteria, with word guesses matching the length of the secret word.
 
-Guesses must consist of letters from the English alphabet. Word guesses must match the length of the given word and only include English alphabet characters.
+Correct letter guesses replace underscores with the right letters. Each incorrect guess costs a life, bringing the character closer to capture depicted through the 'fall from the tree' sequence.
 
-Correct letter guesses will replace the corresponding **_** symbols with the correct letters. For each incorrect guess, whether a letter or a whole word, the player will lose a life, bringing the character one step closer to being captured and hanged.
+Success results in a congratulatory sequence and an option to play again, while failure reveals the word and offers retry encouragement.
 
-Upon successfully identifying the word, players will receive a congratulatory message and an option to play again.
+Repeated guesses on letters previously tried don't incur penalties, guiding players to think strategically.
 
-If players run out of lives, the character will, unfortunately, be captured and hanged. A message of commiseration will be presented, along with an opportunity to try again.
-
-Players will also be reminded of any letters they have already guessed, prompting them to guess again without losing a life for repeated guesses.
+For additional details on gameplay strategies and the narrative, refer to the mission outlined in the Welcome Message.
 
 ## Game Mechanics 
 A flowchart detailing the game's mechanics was designed using [draw.io](https://app.diagrams.net/ "draw.io"). Before diving into coding, I always draft a plan, sketching out the code structure, which is why I opted for the same method in my flowchart. You can view the flowchart by clicking the link below.
