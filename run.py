@@ -4,6 +4,7 @@ import os
 import time
 import sys
 
+
 def clear_screen():
     """
     Clear the console screen.
@@ -22,6 +23,14 @@ def typewriter_effect(text, delay=0.01):
 
 
 def walk_out():
+    """
+    Animate a successful rescue of the hangman figure.
+    This function displays an animation where the stick figure (hangman)
+    walks across the screen from left to right, indicating a successful
+    rescue. It prints a success message above the moving hangman, 
+    simulating a congratulatory scene for the player who correctly guessed
+    the secret word before running out of attempts.
+    """
     hangman = [
         "  O  ",
         " /|\\ ",
@@ -40,8 +49,8 @@ def walk_out():
         clear_screen()
 
         # Display the success message above the hangman
-        success_message = "The secret agent 003 was saved! Good job, agent!"
-        print("\033[{};{}H{}".format(start_y - 2, int(screen_width / 2) - len(success_message) // 2, success_message))
+        success_message = "The secret agent 003 was saved! Good job, agent!"  # noqa
+        print("\033[{};{}H{}".format(start_y - 2, int(screen_width / 2) - len(success_message) // 2, success_message))  # noqa
 
         # Display the moving hangman
         for j, line in enumerate(hangman):
@@ -51,8 +60,8 @@ def walk_out():
         # Move the hangman towards the end position
         start_x += len(hangman[0])
         if start_x > end_x:
-            break
-    
+            break    
+
 
 def fall_from_tree():
     """
@@ -124,22 +133,20 @@ def display_welcome_message():
     """
     message = (
         "\n" + "*" * 70 + "\n"
-        "*  HANGMAN ADVENTURE: THE WORD QUEST                               *\n"
+        "*  HANGMAN ADVENTURE: THE WORD QUEST                               *\n"  # noqa
         "*" + "-" * 68 + "*\n"
-        "*  Mission: Decode the secret word and rescue the stick figure!    *\n"
-        "*  Agent 003 is compromised. His life depends on your skills.      *\n"
-        "*  His fate is in your knowledge.                                  *\n"
-        "*  Rules of Engagement:                                            *\n"
-        "*   - Guess letters or the entire word                             *\n"
-        "*   - Each mistake brings the stick figure closer to peril         *\n"
-        "*   - Use standard English letters only                            *\n"
-        "*   - The secret words are drawn from the world of espionage       *\n"
-        "*   - Full word guesses must match the secret word's length        *\n"
+        "*  Mission: Decode the secret word and rescue the stick figure!    *\n"  # noqa
+        "*  Agent 003 is compromised. His life depends on your skills.      *\n"  # noqa
+        "*  His fate is in your knowledge.                                  *\n"  # noqa
+        "*  Rules of Engagement:                                            *\n"  # noqa
+        "*   - Guess letters or the entire word                             *\n"  # noqa
+        "*   - Each mistake brings the stick figure closer to peril         *\n"  # noqa
+        "*   - Use standard English letters only                            *\n"  # noqa
+        "*   - The secret words are drawn from the world of espionage       *\n"  # noqa
+        "*   - Full word guesses must match the secret word's length        *\n"  # noqa
         "*" + "-" * 68 + "*\n"
-        "*  Are you ready to begin your lexical journey?                    *\n"
-        
+        "*  Are you ready to begin your lexical journey?                    *\n"  # noqa
     )
-    
     typewriter_effect(message, delay=0.01)
 
     while True:
@@ -337,7 +344,6 @@ def play_round(word):
 
 if __name__ == "__main__":
     codename = display_welcome_message()
-    
     while True:
         word = get_word()
         play_round(word)
