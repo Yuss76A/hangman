@@ -259,8 +259,7 @@ def display_progress_bar(remaining_lives, total_lives=6):
     bar = '#' * filled_length + '-' * (bar_length - filled_length)
     percentage = int((remaining_lives / total_lives) * 100)
     print(f"Lives: [{bar}] {percentage}%")
-
-
+    
 
 def play_round(word):
     """Conduct a single round of the Hangman game.

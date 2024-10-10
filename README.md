@@ -75,7 +75,7 @@ If a player attempts to enter an invalid agent name, they will receive an error 
 At the start of the game, players will see the empty gallows, setting the stage for the espionage-themed challenge. As players make incorrect guesses, the gallows will progressively reveal elements of the agent being captured and hanged. When the player exhausts all allowed attempts, the complete rendering of the captured and hanged agent will be displayed, indicating the end of the game.
 
 *Start of Game*<br>
-![Start of Game](docs/screenshots/start.png)
+![Start of Game](docs/screenshots/startgame.png)
 
 *Incorrect Guess*<br>
 ![Incorrect Guesses](docs/screenshots/incorrectguesses.png)
@@ -87,10 +87,10 @@ A word will be randomly selected from a carefully curated list of espionage-them
 As the game progresses, each correctly guessed letter will be revealed in the word, while incorrectly guessed letters or words will be noted separately. All correct and incorrect guesses will be cataloged in their respective sections, allowing players to keep track of their progress and previously attempted guesses. This feature helps players strategize and avoid repeating mistakes.
 
 *Letters Guessed Correctly*<br>
-![Letters Guessed Correctly](docs/screenshots/correctlyguessed.png)
+![Letters Guessed Correctly](docs/screenshots/guessedcorrectly.png)
 
 *Letters Guessed Incorrectly*<br>
-![Letters Guessed Incorrectly](docs/screenshots/incorrectwordstrack.png)
+![Letters Guessed Incorrectly](docs/screenshots/incorrectwords.png)
 
 ### List of Guessed Words
 
@@ -104,7 +104,7 @@ If a player incorrectly guesses a word, it will be added to a list of incorrect 
 If a player attempts to guess multiple letters and the length of the guess does not match the length of the word, an error message will notify them that the guess is invalid. Similarly, if a player submits a character not from the standard English alphabet, they will receive a notification that their input is not valid. These alerts help maintain the integrity of gameplay by ensuring all guesses align with the game's rules.
 
 *Incorrect Word Length Validation*<br>
-![Incorrect Length Guess](docs/screenshots/incorrectword.png)
+![Incorrect Length Guess](docs/screenshots/incorrectlength.png)
 
 *Incorrect Character Guess*<br>
 ![Incorrect Character Guess](docs/screenshots/invalidinput.png)
@@ -114,9 +114,6 @@ If a player attempts to guess multiple letters and the length of the guess does 
 Upon finishing the game, players will receive a completion message that reflects the outcome of their gameplay. This message will either celebrate their success with a congratulatory note if they guessed the word correctly or provide a commiseratory remark if they did not succeed, encouraging them to improve and try again. The completion message serves as a closing interaction, summarizing the player's gaming experience.
 
 * The animation sequence provides a rewarding visual experience for players, celebrating their successful effort in saving the agent, symbolized by the hangman figure. When a player correctly guesses the secret word, the hangman animates across the screen, signifying the agent's safe escape. This engaging visual reward adds a lively and gratifying conclusion to the game, making the achievement feel tangible and fun, enhancing the overall enjoyment of playing the game.
-
-*Congratulatory Message*<br>
-![Congratulatory Message](docs/screenshots/guessedword.png)
 
 *Walking out Animation*<br>
 ![Walkin out Animation](docs/screenshots/animationwalking.png)
@@ -158,7 +155,7 @@ Incorrect Guesses: With each incorrect guess, points are deducted, reflecting th
 - While the points don't persist beyond a single game session, they serve as a fun challenge and personal achievement tracker. There is no system for maintaining scores between games or creating a leaderboard. They offer players a sense of accomplishment with each successful guess and emphasize the importance of each decision during play.
 
 *Scoring for Motivation*<br>
-![Scoring for Motivation](docs/screenshots/points.png)
+![Scoring for Motivation](docs/screenshots/scoringpoints.png)
 
 ### Testing 
 
