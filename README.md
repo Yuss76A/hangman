@@ -115,11 +115,23 @@ If a player attempts to guess multiple letters and the length of the guess does 
 
 Upon finishing the game, players will receive a completion message that reflects the outcome of their gameplay. This message will either celebrate their success with a congratulatory note if they guessed the word correctly or provide a commiseratory remark if they did not succeed, encouraging them to improve and try again. The completion message serves as a closing interaction, summarizing the player's gaming experience.
 
+* The animation sequence provides a rewarding visual experience for players, celebrating their successful effort in saving the agent, symbolized by the hangman figure. When a player correctly guesses the secret word, the hangman animates across the screen, signifying the agent's safe escape. This engaging visual reward adds a lively and gratifying conclusion to the game, making the achievement feel tangible and fun, enhancing the overall enjoyment of playing the game.
+
 *Congratulatory Message*<br>
 ![Congratulatory Message](docs/screenshots/guessedword.png)
 
+*Walking out Animation*<br>
+![Walkin out Animation](docs/screenshots/animationwalking.png)
+
+* The "fall from the tree" animation sequence adds a dramatic conclusion to the game when the player fails to correctly guess the secret word. As a final gesture before the animation, the game briefly reveals the correct word, allowing the player to see what was missed. Following this revelation, the animation depicts the hangman figure—a representation of the agent—falling from the gallows. 
+
+This visual sequence serves as a stark contrast to the rewarding save animation and underscores the consequence of failure. Accompanied by the message "You failed to save me, Agent," it enhances the emotional depth of the game by dramatizing the stakes and reinforcing the urgency of the player's mission. Showing the secret word momentarily emphasizes the outcome and reflects on the challenge, making the gameplay experience more immersive and impactful.
+
 *Failure Acknowledgment*<br>
 ![Failure Acknowledgment](docs/screenshots/failedmessage.png)
+
+*Failure Animation*<br>
+![Failure Animation](docs/screenshots/animationfailure.png)
 
 ### Replay Option
 
