@@ -252,6 +252,16 @@ def ask_to_play_again():
             print("Invalid response. Please enter 'Y' for yes or 'N' for no.")
 
 
+def display_progress_bar(remaining_lives, total_lives=6):
+    """Displays a simple progress bar representing remaining lives."""
+    bar_length = 20
+    filled_length = int(remaining_lives / total_lives * bar_length)
+    bar = '#' * filled_length + '-' * (bar_length - filled_length)
+    percentage = int((remaining_lives / total_lives) * 100)
+    print(f"Lives: [{bar}] {percentage}%")
+
+
+
 def play_round(word):
     """Conduct a single round of the Hangman game.
     This function manages the game logic, including user input,
@@ -274,6 +284,8 @@ def play_round(word):
     print(" ".join(masked_word), "\n")
 
     while not has_guessed_correctly and remaining_lives > 0:
+        display_progress_bar(remaining_lives)
+
         suggestion = input("Enter your guess (letter or word): ").strip().upper()  # noqa
 
         if len(suggestion) == 1 and suggestion.isalpha():
