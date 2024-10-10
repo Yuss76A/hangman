@@ -137,6 +137,8 @@ def display_welcome_message():
         "*" + "-" * 68 + "*\n"
         "*  Mission: Decode the secret word and rescue the stick figure!    *\n"  # noqa
         "*  Agent 003 is compromised. His life depends on your skills.      *\n"  # noqa
+        "*  Each correct guess brings you closer to saving the agent,       *\n"  # noqa
+        "*  while every mistake deepens their peril—their very survival     *\n" # noqa
         "*  His fate is in your knowledge.                                  *\n"  # noqa
         "*  Rules of Engagement:                                            *\n"  # noqa
         "*   - Guess letters or the entire word                             *\n"  # noqa
