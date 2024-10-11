@@ -157,8 +157,8 @@ def display_welcome_message():
 
     while True:
         print(
-        f"""
-        Agent, your codename must be ONE WORD, 1-10 letters long, 
+         """
+        Agent, your codename must be ONE WORD, 1-10 letters long,
         using only English alphabet characters.
         """
     )
