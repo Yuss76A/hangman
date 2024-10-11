@@ -360,7 +360,7 @@ def play_round(word):
 
         else:
             print(
-                "Invalid input. Please guess either a single letter"
+                "Invalid input. Please guess either a single letter "
                 "or the full word."
                 )
 
