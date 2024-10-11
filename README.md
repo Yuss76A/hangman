@@ -164,7 +164,7 @@ The life bar in "Hangman Adventure: The Word Quest" begins at 100% and decreases
 *Life Bar*<br>
 ![Life Bar](docs/screenshots/lifebar.png)
 
-### Testing 
+### Code Manual Testing
 
 | Feature Tested | Feature Description | Testing Completed | Expected Outcome | Result |
 |-----------------|---------------------|-------------------|-------------------|--------|
