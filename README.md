@@ -207,22 +207,6 @@ We may address these style issues in future updates, but they don't detract from
 *words.py Validation Clear*<br>
 ![words.py Validation Clear](docs/screenshots/words.png)
 
-- Code Style Note for run.py and words.py !!!
-
-In our Hangman game, you may notice the use of # noqa comments in the run.py and words.py files. These comments are used to suppress specific style warnings that are reported by code linters, such as pycodestyle or flake8.
-
-The # noqa comment tells the linter to ignore the warning on the line where it's used. This is a common practice when the style warning does not indicate a functional issue with the code, and the developer decides to prioritize other development tasks over immediately addressing the style concern.
-
-In the case of our Hangman game, the style warnings being suppressed are mostly related to:
-
-1. Trailing Whitespace (W291): As mentioned earlier, these warnings indicate the presence of extra spaces or tabs at the end of code lines. While keeping the code clean and following style guidelines is generally recommended, these particular warnings do not affect the game's functionality.
-
-2. Line Length (E501): Certain lines in run.py and words.py may exceed the recommended maximum line length. Again, this is a stylistic concern and does not impact the game's performance or behavior.
-
-By using # noqa, the development team can focus on more pressing concerns, such as implementing new features, fixing bugs, or improving the overall user experience, without being distracted by these minor style issues.
-
-Rest assured that the use of # noqa does not compromise the quality or integrity of the Hangman game. The code will continue to function as intended, and the development team remains committed to addressing any genuine problems or bugs that may arise.
-
 ### Comprehensive Testing and Commitment to Quality ( Bugs)
 
 We're pleased to report that during our extensive testing of the Hangman game, we did not encounter any bugs or issues that would impact the overall gameplay experience. The core functionality, including the ability to guess letters, decode the hidden word, and navigate the visual representation of the hangman, has been thoroughly validated and proven to work correctly.

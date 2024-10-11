@@ -312,7 +312,7 @@ def play_round(word):
 
         if len(suggestion) == 1 and suggestion.isalpha():
             if (suggestion in correct_guesses or
-                suggestion in incorrect_guesses):
+                    suggestion in incorrect_guesses):
                 print(
                     f"Letter has been guessed '{suggestion}'. Try again."
                     )
