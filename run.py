@@ -157,22 +157,21 @@ def display_welcome_message():
 
     while True:
         print(
-         """
-        Agent, your codename must be ONE WORD, 1-10 letters long,
-        using only English alphabet characters.
-        """
-    )
-    codename = input("Enter your secret agent codename: ").strip().capitalize()
-    if codename.isalpha() and 1 <= len(codename) <= 10:
-        typewriter_effect(
             f"""
-            Welcome, Agent {codename}! Your word-saving mission starts now.
-            """,
-            delay=0.01
-        )
-        return codename
-    else:
-        print("Invalid codename. Stick to the protocol and try again.\n")
+Agent, your codename must be 1-10 letters long, English alphabet only.""")
+        codename = input(
+            "Enter your secret agent codename: "    
+        ).strip().capitalize()  # noqa
+        if codename.isalpha() and 1 <= len(codename) <= 10:
+            typewriter_effect(
+                f"""
+Welcome, Agent {codename}! Your word-saving mission starts now.
+                """,
+                delay=0.01    
+            )
+            return codename
+        else:
+            print("Invalid codename. Stick to the protocol and try again.\n")
 
 
 def get_word():
