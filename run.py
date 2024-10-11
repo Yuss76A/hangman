@@ -158,7 +158,7 @@ def display_welcome_message():
     while True:
         print(
             f"""
-Agent, your codename must be 1-10 letters long, English alphabet only.""")
+Agent, your codename must be a single English word, 1-10 letters long.""")
         codename = input(
             "Enter your secret agent codename: "    
         ).strip().capitalize()  # noqa
