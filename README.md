@@ -198,6 +198,15 @@ Our commitment to delivering a seamless and enjoyable Hangman experience is unwa
 
 Rest assured, agents, that we will continue to closely monitor the Hangman game and address any bugs or issues that may surface in the future. Your satisfaction and the integrity of the game experience are of the utmost importance to us.
 
+### Languages used built in packages and Third-Party Libraries
+
+* The **requests** library was utilized in the game, with words carefully crafted around an espionage theme to enhance the immersive experience.
+* The **random** module was used to select words unpredictably from the list of options.
+* The **os** module was employed to manage console interactions, allowing the screen to be cleared dynamically for a cleaner game interface.
+* The **time** module was used to control timing, creating delays for animations and effects to enhance user engagement.
+* The **sys** module facilitated output manipulation, enabling text to display gradually for a typewriter effect, enriching the visual experience.
+
+
 ## Development and Deployment
 
 ### Deployment
@@ -241,14 +250,6 @@ This project was deployed on [Heroku](https://www.heroku.com "Heroku") using the
 | Game Outcome Message | Upon game conclusion, message displayed indicating win or loss. | Complete game through win and loss scenarios. | When user wins, congratulatory message should display. When user loses, commiserative message should appear. | Confirmed. |
 | Play Again Prompt | Upon game conclusion, user is asked about playing another round. | Conclude game. | When game completed, prompt should appear allowing user to exit program or start new game. Program should restart if user accepts and terminate if user declines. | Verified. |
 | Play Again Validation | Validate play again response from user. | Provide invalid input to play again prompt. | If user provides invalid input to play again prompt, they should be notified and allowed to input again. | As expected. |
-
-## Libraries Used
-
-* The **requests** library was utilized in the game, with words carefully crafted around an espionage theme to enhance the immersive experience.
-* The **random** module was used to select words unpredictably from the list of options.
-* The **os** module was employed to manage console interactions, allowing the screen to be cleared dynamically for a cleaner game interface.
-* The **time** module was used to control timing, creating delays for animations and effects to enhance user engagement.
-* The **sys** module facilitated output manipulation, enabling text to display gradually for a typewriter effect, enriching the visual experience.
 
 ## Credits
 
