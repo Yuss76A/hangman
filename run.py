@@ -261,6 +261,7 @@ def ask_to_play_again():
             .upper()
         )
         if response.startswith('Y'):
+            clear_screen()
             chosen_word = get_word()
             play_round(chosen_word)
             valid_response = True
@@ -393,6 +394,7 @@ def play_round(word):
 if __name__ == "__main__":
     codename = display_welcome_message()
     while True:
+        clear_screen()
         word = get_word()
         play_round(word)
     print("Thanks for playing!")
