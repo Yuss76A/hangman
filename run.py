@@ -1,8 +1,8 @@
 import random
-from words import word_list
 import os
 import time
 import sys
+from words import word_list
 
 
 def clear_screen():
@@ -27,7 +27,7 @@ def walk_out():
     Animate a successful rescue of the hangman figure.
     This function displays an animation where the stick figure (hangman)
     walks across the screen from left to right, indicating a successful
-    rescue. It prints a success message above the moving hangman, 
+    rescue. It prints a success message above the moving hangman,
     simulating a congratulatory scene for the player who correctly guessed
     the secret word before running out of attempts.
     """
@@ -49,7 +49,10 @@ def walk_out():
         clear_screen()
 
         # Display the success message above the hangman
-        success_message = "The secret agent 003 was saved! Good job, agent!"  # noqa
+        success_message = (
+        f"The secret agent 003 was saved!\n" 
+        f"Good job, agent!"
+        )
         print("\033[{};{}H{}".format(start_y - 2, int(screen_width / 2) - len(success_message) // 2, success_message))  # noqa
 
         # Display the moving hangman
@@ -60,7 +63,7 @@ def walk_out():
         # Move the hangman towards the end position
         start_x += len(hangman[0])
         if start_x > end_x:
-            break    
+            break
 
 
 def fall_from_tree():
@@ -81,7 +84,7 @@ def fall_from_tree():
         """,
         """
            --------
-           |      
+           |
            |      O
            |     \\|/
            |      |
@@ -90,8 +93,8 @@ def fall_from_tree():
         """,
         """
            --------
-           |      
-           |      
+           |
+           |
            |      O
            |     \\|/
            |      |
@@ -99,9 +102,9 @@ def fall_from_tree():
         """,
         """
            --------
-           |      
-           |      
-           |      
+           |
+           |
+           |
            |      O
            |     \\|/
            -      |
@@ -109,10 +112,10 @@ def fall_from_tree():
         """,
         """
            --------
-           |      
-           |      
-           |      
-           |      
+           |
+           |
+           |
+           |
            |      O
            -     \\|/
                   |
@@ -184,7 +187,7 @@ def display_hangman(tries):
            |      O
            |     \\|/
            |      |
-           |     / 
+           |     /
            -
         """,
         """
@@ -193,7 +196,7 @@ def display_hangman(tries):
            |      O
            |     \\|/
            |      |
-           |      
+           |
            -
         """,
         """
@@ -202,7 +205,7 @@ def display_hangman(tries):
            |      O
            |     \\|
            |      |
-           |     
+           |
            -
         """,
         """
@@ -211,25 +214,25 @@ def display_hangman(tries):
            |      O
            |      |
            |      |
-           |     
+           |
            -
         """,
         """
            --------
            |      |
            |      O
-           |    
-           |      
-           |     
+           |
+           |
+           |
            -
         """,
         """
            --------
            |      |
-           |      
-           |    
-           |      
-           |     
+           |
+           |
+           |
+           |
            -
         """
     ]
@@ -259,15 +262,15 @@ def display_progress_bar(remaining_lives, total_lives=6):
     bar = '#' * filled_length + '-' * (bar_length - filled_length)
     percentage = int((remaining_lives / total_lives) * 100)
     print(f"Lives: [{bar}] {percentage}%")
-    
+
 
 def play_round(word):
     """Conduct a single round of the Hangman game.
     This function manages the game logic, including user input,
     score tracking, and game state updates.
     """
-    score = 0  
-    points_per_letter = 5  
+    score = 0
+    points_per_letter = 5
     points_per_word = 20
     penalty_points = 5
 
