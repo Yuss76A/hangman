@@ -160,14 +160,14 @@ def display_welcome_message():
             f"""
 Agent, your codename must be a single English word, 1-10 letters long.""")
         codename = input(
-            "Enter your secret agent codename: "    
-        ).strip().capitalize()  # noqa
+            "Enter your secret agent codename: "
+        ).strip().capitalize()
         if codename.isalpha() and 1 <= len(codename) <= 10:
             typewriter_effect(
                 f"""
 Welcome, Agent {codename}! Your word-saving mission starts now.
                 """,
-                delay=0.01    
+                delay=0.01
             )
             return codename
         else:
@@ -311,8 +311,11 @@ def play_round(word):
         )
 
         if len(suggestion) == 1 and suggestion.isalpha():
-            if suggestion in correct_guesses or suggestion in incorrect_guesses:  # noqa
-                print(f"You've already guessed the letter '{suggestion}'. Try again.")  # noqa
+            if (suggestion in correct_guesses or
+                suggestion in incorrect_guesses):
+                print(
+                    f"Letter has been guessed '{suggestion}'. Try again."
+                    )
             elif suggestion not in word:
                 print(f"Unfortunately, '{suggestion}' is not in the word.")
                 remaining_lives -= 1
