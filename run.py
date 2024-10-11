@@ -50,9 +50,11 @@ def walk_out():
 
         # Display the success message above the hangman
         success_message = (
-        f"The secret agent 003 was saved! Good job, agent!"
+            f"The secret agent 003 was saved! Good job, agent!"
         )
-        print("\033[{};{}H{}".format(start_y - 2, int(screen_width / 2) - len(success_message) // 2, success_message))  # noqa
+        row = start_y - 2
+        col = int(screen_width / 2) - len(success_message) // 2
+        print(f"\033[{row};{col}H{success_message}")
 
         # Display the moving hangman
         for j, line in enumerate(hangman):
@@ -130,27 +132,27 @@ def fall_from_tree():
 
 def display_welcome_message():
     """
-    Display the game's introduction and obtain a valid username from the player.  # noqa
+    Displays the game's introduction and prompts the player for a username.
     Returns the validated username.
     """
-    message = (
-        "\n" + "*" * 70 + "\n"
-        "*  HANGMAN ADVENTURE: THE WORD QUEST                               *\n"  # noqa
-        "*" + "-" * 68 + "*\n"
-        "*  Mission: Decode the secret word and rescue the stick figure!    *\n"  # noqa
-        "*  Agent 003 is compromised. His life depends on your skills.      *\n"  # noqa
-        "*  Each correct guess brings you closer to saving the agent,       *\n"  # noqa
-        "*  while every mistake deepens their peril—their very survival     *\n"  # noqa
-        "*  His fate is in your knowledge.                                  *\n"  # noqa
-        "*  Rules of Engagement:                                            *\n"  # noqa
-        "*   - Guess letters or the entire word                             *\n"  # noqa
-        "*   - Each mistake brings the stick figure closer to peril         *\n"  # noqa
-        "*   - Use standard English letters only                            *\n"  # noqa
-        "*   - The secret words are drawn from the world of espionage       *\n"  # noqa
-        "*   - Full word guesses must match the secret word's length        *\n"  # noqa
-        "*" + "-" * 68 + "*\n"
-        "*  Are you ready to begin your lexical journey?                    *\n"  # noqa
-    )
+    message = f"""
+\n{'*' * 70}\n
+*  HANGMAN ADVENTURE: THE WORD QUEST                               *\n
+{'-' * 68}\n
+*  Mission: Decode the secret word and rescue the stick figure!    *\n
+*  Agent 003 is compromised. His life depends on your skills.      *\n
+*  Each correct guess brings you closer to saving the agent,       *\n
+*  while every mistake deepens their peril—their very survival     *\n
+*  His fate is in your knowledge.                                  *\n
+*  Rules of Engagement:                                            *\n
+*   - Guess letters or the entire word                             *\n
+*   - Each mistake brings the stick figure closer to peril         *\n
+*   - Use standard English letters only                            *\n
+*   - The secret words are drawn from the world of espionage       *\n
+*   - Full word guesses must match the secret word's length        *\n
+{'-' * 68}\n
+*  Are you ready to begin your lexical journey?                    *\n
+"""
     typewriter_effect(message, delay=0.01)
 
     while True:
