@@ -50,8 +50,7 @@ def walk_out():
 
         # Display the success message above the hangman
         success_message = (
-        f"The secret agent 003 was saved!\n" 
-        f"Good job, agent!"
+        f"The secret agent 003 was saved! Good job, agent!"
         )
         print("\033[{};{}H{}".format(start_y - 2, int(screen_width / 2) - len(success_message) // 2, success_message))  # noqa
 
