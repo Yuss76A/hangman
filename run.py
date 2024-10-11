@@ -156,13 +156,23 @@ def display_welcome_message():
     typewriter_effect(message, delay=0.01)
 
     while True:
-        print("Agent, your codename must be 1-10 letters long, English alphabet only.")  # noqa
-        codename = input("Enter your secret agent codename: ").strip().capitalize()  # noqa
-        if codename.isalpha() and 1 <= len(codename) <= 10:
-            typewriter_effect(f"\nWelcome, Agent {codename}! Your word-saving mission starts now.\n", delay=0.01)  # noqa
-            return codename
-        else:
-            print("Invalid codename. Stick to the protocol and try again.\n")
+        print(
+        f"""
+        Agent, your codename must be ONE WORD, 1-10 letters long, 
+        using only English alphabet characters.
+        """
+    )
+    codename = input("Enter your secret agent codename: ").strip().capitalize()
+    if codename.isalpha() and 1 <= len(codename) <= 10:
+        typewriter_effect(
+            f"""
+            Welcome, Agent {codename}! Your word-saving mission starts now.
+            """,
+            delay=0.01
+        )
+        return codename
+    else:
+        print("Invalid codename. Stick to the protocol and try again.\n")
 
 
 def get_word():
@@ -171,7 +181,9 @@ def get_word():
 
 
 def display_hangman(tries):
-    """Return a string representation of the hangman for the current number of tries."""  # noqa
+    """Return a string representation of the hangman,
+    for the current number of tries.
+    """
     stages = [
         """
            --------
@@ -244,7 +256,11 @@ def ask_to_play_again():
     """Prompt the user for a new game and restart or exit based on response."""
     valid_response = False
     while not valid_response:
-        response = input("Would you like to play again? (Y/N): ").strip().upper()  # noqa
+        response = (
+            input("Would you like to play again? (Y/N): ")
+            .strip()
+            .upper()
+        )
         if response.startswith('Y'):
             chosen_word = get_word()
             play_round(chosen_word)
@@ -289,7 +305,11 @@ def play_round(word):
     while not has_guessed_correctly and remaining_lives > 0:
         display_progress_bar(remaining_lives)
 
-        suggestion = input("Enter your guess (letter or word): ").strip().upper()  # noqa
+        suggestion = (
+            input("Enter your guess (letter or word): ")
+            .strip()
+            .upper()
+        )
 
         if len(suggestion) == 1 and suggestion.isalpha():
             if suggestion in correct_guesses or suggestion in incorrect_guesses:  # noqa
@@ -300,9 +320,9 @@ def play_round(word):
                 incorrect_guesses.append(suggestion)
                 if score >= penalty_points:
                     score -= penalty_points
-                    print(f"Incorrect letter guess! {penalty_points} points deducted.")  # noqa
+                    print(f"Wrong guess! {penalty_points} points deducted.")
                 else:
-                    print("Incorrect letter guess! Not enough points to deduct.")  # noqa
+                    print("Wrong guess! Not enough points to deduct.")
             else:
                 print(f"Nice job! '{suggestion}' is present in the word.")
                 correct_guesses.append(suggestion)
@@ -317,30 +337,36 @@ def play_round(word):
 
         elif len(suggestion) == len(word) and suggestion.isalpha():
             if suggestion in guessed_full_words:
-                print(f"You've already guessed the word '{suggestion}'. Try a different word.")  # noqa
+                print(
+                    f"You've already guessed the word '{suggestion}'."
+                    "Try a different word."
+                    )
             elif suggestion != word:
                 print(f"'{suggestion}' is not the correct word.")
                 remaining_lives -= 1
                 guessed_full_words.append(suggestion)
                 if score >= penalty_points:
                     score -= penalty_points
-                    print(f"Incorrect full word guess! {penalty_points} points deducted.")  # noqa
+                    print("Incorrect word! {penalty_points} points deducted.")
                 else:
-                    print("Incorrect full word guess! Not enough points to deduct.")  # noqa
-                print(f"Score after deduction: {score}")
+                    print("Incorrect full word guess! Insufficient points.")
+                    print(f"Score after deduction: {score}")
             else:
                 has_guessed_correctly = True
                 masked_word = list(word)
                 score += points_per_word
 
         else:
-            print("Invalid input. Please guess either a single letter or the full word.")  # noqa
+            print(
+                "Invalid input. Please guess either a single letter"
+                "or the full word."
+                )
 
         print(display_hangman(remaining_lives))
         print(f"The word contains {len(word)} letters.\n")
         print(" ".join(masked_word), "\n")
         print(f"Correct letters guessed: {', '.join(sorted(correct_guesses))}")
-        print(f"Incorrect letters guessed: {', '.join(sorted(incorrect_guesses))}")  # noqa
+        print(f"Wrong letters guessed: {', '.join(sorted(incorrect_guesses))}")
         print(f"Complete words guessed: {', '.join(guessed_full_words)}", "\n")
         print(f"Current Score: {score}")
 
@@ -349,7 +375,10 @@ def play_round(word):
         walk_out()
         time.sleep(2)
     else:
-        print(f"You failed, Agent. This failure runs deep. The word was '{word}'. Better luck next time.\n")  # noqa
+        print(
+            f"You failed, Agent. This failure runs deep. "
+            f"The word was '{word}'. Better luck next time.\n"
+            )
         time.sleep(3)
 
         fall_from_tree()
