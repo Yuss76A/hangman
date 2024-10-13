@@ -320,6 +320,8 @@ def play_round(word):
                     )
             elif suggestion not in word:
                 print(f"\033[91mUnfortunately, '{suggestion}' is not in the word.")
+                time.sleep(2)
+                print("\r\033[0m", end="")
                 remaining_lives -= 1
                 incorrect_guesses.append(suggestion)
                 if score >= penalty_points:
@@ -329,6 +331,8 @@ def play_round(word):
                     print("Wrong guess! Not enough points to deduct.")
             else:
                 print(f"\033[92mNice job! '{suggestion}' is present in the word.")
+                time.sleep(2)
+                print("\r\033[0m", end="")
                 correct_guesses.append(suggestion)
                 score += points_per_letter
                 word_list = list(masked_word)
