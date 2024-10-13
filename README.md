@@ -169,14 +169,17 @@ Incorrect Guesses: With each incorrect guess, points are deducted, reflecting th
 - While the points don't persist beyond a single game session, they serve as a fun challenge and personal achievement tracker. There is no system for maintaining scores between games or creating a leaderboard. They offer players a sense of accomplishment with each successful guess and emphasize the importance of each decision during play.
 
 *Scoring for Motivation*<br>
-![Scoring for Motivation](docs/screenshots/scoringpoints.png)
+![Scoring for Motivation](docs/screenshots/points.png)
 
 ### Life Bar
 
-The life bar in "Hangman Adventure: The Word Quest" begins at 100% and decreases with each incorrect guess. This visual representation of remaining attempts adds urgency to the game, challenging players to choose their guesses wisely. As the life bar approaches zero, the tension mounts, emphasizing the critical nature of each decision in the mission to save Agent 003.
+The life bar in the Word Quest comprises six pure white hearts, each representing one of your precious attempts to uncover the hidden word. With every incorrect guess, a heart transforms into a somber skull, signifying that a chance has been lost. This transformation underscores the urgency and importance of each decision you make.
 
 *Life Bar*<br>
-![Life Bar](docs/screenshots/lifebar.png)
+![Life Bar](docs/screenshots/lives.png)
+
+*Skulls*<br>
+![Skulls](docs/screenshots/skulls.png)
 
 ### Validator Testing
 
