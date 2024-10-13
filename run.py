@@ -272,12 +272,14 @@ def ask_to_play_again():
 
 
 def display_progress_bar(remaining_lives, total_lives=6):
-    """Displays a simple progress bar representing remaining lives."""
-    bar_length = 20
-    filled_length = int(remaining_lives / total_lives * bar_length)
-    bar = '#' * filled_length + '-' * (bar_length - filled_length)
+    """Displays a progress bar with emojis representing remaining lives."""
+    full_heart = "❤️"
+    empty_heart = "🖤"
+    
+    hearts = full_heart * remaining_lives + empty_heart * (total_lives - remaining_lives)
     percentage = int((remaining_lives / total_lives) * 100)
-    print(f"Lives: [{bar}] {percentage}%")
+    
+    print(f"Lives: {hearts} {percentage}%")
 
 
 def play_round(word):
