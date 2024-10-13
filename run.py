@@ -374,6 +374,8 @@ def play_round(word):
 
     if has_guessed_correctly:
         print("Well done! You've successfully saved the hangman!\n")
+        print(f"The word was: {word}")
+        time.sleep(6)
         walk_out()
         time.sleep(2)
     else:
@@ -381,7 +383,7 @@ def play_round(word):
             f"You failed, Agent. This failure runs deep. "
             f"The word was '{word}'. Better luck next time.\n"
             )
-        time.sleep(3)
+        time.sleep(6)
 
         fall_from_tree()
 
