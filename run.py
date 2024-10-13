@@ -256,7 +256,7 @@ def ask_to_play_again():
     valid_response = False
     while not valid_response:
         response = (
-            input("Would you like to play again? (Y/N): ")
+            input("Would you like to play again? (Yes/No/Y/N): ")
             .strip()
             .upper()
         )
@@ -268,7 +268,7 @@ def ask_to_play_again():
             print("Thanks for playing! Goodbye.")
             exit()
         else:
-            print("Invalid response. Please enter 'Y' for yes or 'N' for no.")
+            print("Invalid response. Please enter 'Yes', 'Y', 'No', or 'N'.")
 
 
 def display_progress_bar(remaining_lives, total_lives=6):
