@@ -86,11 +86,20 @@ A word will be randomly selected from a carefully curated list of espionage-them
 
 As the game progresses, each correctly guessed letter will be revealed in the word, while incorrectly guessed letters or words will be noted separately. All correct and incorrect guesses will be cataloged in their respective sections, allowing players to keep track of their progress and previously attempted guesses. This feature helps players strategize and avoid repeating mistakes.
 
+1. Feedback on Guesses: 
+
+* When you guess a letter that is in the word, a notification will momentarily appear in green, signifying a correct guess.
+If the letter is not in the word, the notification will display in red, indicating a wrong guess.
+
+2. Persistent Feedback: 
+
+* The color of the notification (red for incorrect, green for correct) will remain at the top of the game interface until you make another guess, ensuring you remember your last guess's outcome.
+
 *Letters Guessed Correctly*<br>
 ![Letters Guessed Correctly](docs/screenshots/guessedcorrectly.png)
 
 *Letters Guessed Incorrectly*<br>
-![Letters Guessed Incorrectly](docs/screenshots/incorrectwords.png)
+![Letters Guessed Incorrectly](docs/screenshots/incorrectlyguessed.png)
 
 ### List of Guessed Words
 
