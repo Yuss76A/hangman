@@ -274,7 +274,7 @@ def ask_to_play_again():
 def display_progress_bar(remaining_lives, total_lives=6):
     """Displays a progress bar with emojis representing remaining lives."""
     full_heart = "❤️"
-    empty_heart = "🖤"
+    empty_heart = "💀"
     
     hearts = full_heart * remaining_lives + empty_heart * (total_lives - remaining_lives)
     percentage = int((remaining_lives / total_lives) * 100)
