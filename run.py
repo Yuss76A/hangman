@@ -260,11 +260,11 @@ def ask_to_play_again():
             .strip()
             .upper()
         )
-        if response in ("YES", "Y"):
+        if response in ("Yes", "Y"):
             chosen_word = get_word()
             play_round(chosen_word)
             break
-        elif response in ("NO", "N"):
+        elif response in ("No", "N"):
             print("Thanks for playing! Goodbye.")
             exit()
         else:
