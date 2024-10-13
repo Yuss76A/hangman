@@ -258,17 +258,17 @@ def ask_to_play_again():
         response = (
             input("Would you like to play again? (Yes/No/Y/N): ")
             .strip()
-            .upper()
+            .lower()
         )
-        if response in ("Yes", "Y"):
+        if response in ("yes", "y"):
             chosen_word = get_word()
             play_round(chosen_word)
             break
-        elif response in ("No", "N"):
+        elif response in ("no", "n"):
             print("Thanks for playing! Goodbye.")
             exit()
         else:
-            print("Invalid response. Please enter 'Yes', 'Y', 'No', or 'N'.")
+            print("Invalid response. Please enter 'yes', 'y', 'no', or 'n'.")
 
 
 def display_progress_bar(remaining_lives, total_lives=6):
@@ -392,7 +392,6 @@ def play_round(word):
 
 if __name__ == "__main__":
     codename = display_welcome_message()
-    while True:
-        word = get_word()
-        play_round(word)
+    word = get_word()
+    play_round(word)
     print("Thanks for playing!")
