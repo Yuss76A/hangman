@@ -366,9 +366,11 @@ def play_round(word):
 
         else:
             print(
-                "Invalid input. Please guess either a single letter "
+                "\033[93mInvalid input. Please guess either a single letter "
                 "or the full word."
                 )
+            time.sleep(2)
+            print("\r\033[0m", end="")
 
         print(display_hangman(remaining_lives))
         print(f"The word contains {len(word)} letters.\n")
