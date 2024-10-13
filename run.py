@@ -254,17 +254,17 @@ def display_hangman(tries):
 def ask_to_play_again():
     """Prompt the user for a new game and restart or exit based on response."""
     valid_response = False
-    while not valid_response:
+    while True:
         response = (
             input("Would you like to play again? (Yes/No/Y/N): ")
             .strip()
             .upper()
         )
-        if response.startswith('Y'):
+        if response in ("YES", "Y"):
             chosen_word = get_word()
             play_round(chosen_word)
-            valid_response = True
-        elif response.startswith('N'):
+            break
+        elif response in ("NO", "N"):
             print("Thanks for playing! Goodbye.")
             exit()
         else:
