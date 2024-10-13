@@ -392,7 +392,6 @@ def play_round(word):
 
 if __name__ == "__main__":
     codename = display_welcome_message()
-    while True:
-        word = get_word()
-        play_round(word)
+    word = get_word()
+    play_round(word)
     print("Thanks for playing!")
