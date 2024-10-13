@@ -126,6 +126,9 @@ Upon finishing the game, players will receive a completion message that reflects
 
 * The animation sequence provides a rewarding visual experience for players, celebrating their successful effort in saving the agent, symbolized by the hangman figure. When a player correctly guesses the secret word, the hangman animates across the screen, signifying the agent's safe escape. This engaging visual reward adds a lively and gratifying conclusion to the game, making the achievement feel tangible and fun, enhancing the overall enjoyment of playing the game.
 
+*Correctly Gussed Word*<br>
+![Correctly Guessed Word](docs/screenshots/guessedword.png)
+
 *Walking out Animation*<br>
 ![Walkin out Animation](docs/screenshots/animationwalking.png)
 
