@@ -112,6 +112,8 @@ If a player incorrectly guesses a word, it will be added to a list of incorrect 
 
 If a player attempts to guess multiple letters and the length of the guess does not match the length of the word, an error message will notify them that the guess is invalid. Similarly, if a player submits a character not from the standard English alphabet, they will receive a notification that their input is not valid. These alerts help maintain the integrity of gameplay by ensuring all guesses align with the game's rules.
 
+If you enter a word that does not match the required length or includes invalid characters such as numbers or special symbols, a notification will be displayed in orange. This serves as an alert to check your input and ensure it fits the criteria of the game.
+
 *Incorrect Word Length Validation*<br>
 ![Incorrect Length Guess](docs/screenshots/incorrectlength.png)
 
