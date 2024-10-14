@@ -24,6 +24,8 @@ For additional details on gameplay strategies and the narrative, refer to the mi
 ## Game Mechanics 
 A flowchart detailing the game's mechanics was designed using [draw.io](https://app.diagrams.net/ "draw.io"). Before diving into coding, I always draft a plan, sketching out the code structure, which is why I opted for the same method in my flowchart. You can view the flowchart by clicking the link below.
 
+This project began as a simple hangman game, a straightforward idea to create a fun and engaging word puzzle. However, as I delved deeper into the coding process, I found myself increasingly captivated by the possibilities for enhancement and creativity. Each day brought new ideas and innovations, transforming the game into something far richer and more complex than I initially anticipated. The accompanying flowchart illustrates this journey, highlighting how a basic hangman concept evolved into a more sophisticated and feature-rich experience with each iteration.
+
 [Game Flowchart](docs/flowchart/hangmandraw.png)
 
 ## Features
