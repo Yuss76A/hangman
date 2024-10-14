@@ -185,17 +185,7 @@ The life bar in the Word Quest comprises six pure white hearts, each representin
 
 To ensure code quality and adherence to PEP 8 standards, each file in this project was validated using the [CI Python Linter](https://pep8ci.herokuapp.com/).
 
-Code Style Note for run.py
-
-In our run.py file, which contains the main game logic for Hangman, there are some style warnings that may be triggered when analyzed by linters. These warnings are all W291: Trailing whitespace, occurring on lines 57, 66, 75, 84, 91, 92, 93, 99, 100, 101, and 102. Trailing whitespace refers to extra spaces at the end of code lines.
-
-It's important to understand that these style suggestions don't affect the game's functionality or execution in any way. They're purely cosmetic recommendations from the PEP 8 style guide for Python.
-
-The Hangman game runs correctly and provides the full intended experience regardless of these warnings in run.py. Players can enjoy all features - guessing letters, decoding words, and immersing in the secret agent theme - without any impact from these style considerations.
-
-For the moment, we've decided to keep the code in run.py as it is. However, if we discover any problems, bugs, or issues affecting the game, we will fix them immediately. We want to emphasize that these particular style warnings in run.py do not affect the game or the code's functionality in any way.
-
-We may address these style issues in future updates, but they don't detract from the current gameplay. Enjoy your Hangman adventure, agents!
+A thorough check of both the word list and the main program files has been completed, and no errors were detected.  This indicates that everything is currently functioning as expected.  We maintain an ongoing commitment to monitoring the system and will swiftly address any problems that may arise in the future.  Rest assured that we're dedicated to maintaining a smooth and error-free experience.
 
 *run.py Validation*<br>
 ![run.py Validation](docs/screenshots/runpy.png)
