@@ -275,10 +275,11 @@ def display_progress_bar(remaining_lives, total_lives=6):
     """Displays a progress bar with emojis representing remaining lives."""
     full_heart = "❤️"
     empty_heart = "💀"
-    
-    hearts = full_heart * remaining_lives + empty_heart * (total_lives - remaining_lives)
+
+    hearts = full_heart * remaining_lives + \
+        empty_heart * (total_lives - remaining_lives)
     percentage = int((remaining_lives / total_lives) * 100)
-    
+
     print(f"Lives: {hearts} {percentage}%")
 
 
@@ -319,7 +320,8 @@ def play_round(word):
                     f"Letter has been guessed '{suggestion}'. Try again."
                     )
             elif suggestion not in word:
-                print(f"\033[91mUnfortunately, '{suggestion}' is not in the word.")
+                print(f"\033[91mUnfortunately, '{suggestion}' is "
+                      f"not in the word.")
                 time.sleep(2)
                 print("\r\033[0m", end="")
                 remaining_lives -= 1
@@ -330,7 +332,8 @@ def play_round(word):
                 else:
                     print("Wrong guess! Not enough points to deduct.")
             else:
-                print(f"\033[92mNice job! '{suggestion}' is present in the word.")
+                print(f"\033[92mNice job! '{suggestion}' is "
+                      f"present in the word.")
                 time.sleep(2)
                 print("\r\033[0m", end="")
                 correct_guesses.append(suggestion)
