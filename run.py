@@ -288,7 +288,7 @@ def play_round(word):
     This function manages the game logic, including user input,
     score tracking, and game state updates.
     """
-    clear_screen()
+    
     score = 0
     points_per_letter = 5
     points_per_word = 20
