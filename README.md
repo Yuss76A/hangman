@@ -215,6 +215,9 @@ Rest assured, agents, that we will continue to closely monitor the Hangman game 
 * The **time** module was used to control timing, creating delays for animations and effects to enhance user engagement.
 * The **sys** module facilitated output manipulation, enabling text to display gradually for a typewriter effect, enriching the visual experience.
 
+### Used Colors
+
+* In the progression of the game, various colors are utilized to enhance the user experience and provide immediate visual feedback. A correct guessed letter is highlighted in green, celebrating your success. An incorrect guessed letter appears in red, indicating a wrong choice. Should an invalid input or character be entered, it will be displayed in orange as a helpful prompt to reconsider your input. All other elements retain a neutral white, ensuring that the key interactions remain the focal point.
 
 ## Development and Deployment
 
