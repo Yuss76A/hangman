@@ -363,9 +363,13 @@ def play_round(word):
         elif len(suggestion) == len(word) and suggestion.isalpha():
             if suggestion in guessed_full_words:
                 print(
-                    f"You've already guessed the word '{suggestion}'."
-                    "Try a different word."
+                    colorama.Fore.MAGENTA
+                    + f"You've already guessed the word '{suggestion}'. "
+                    + "Try a different word."
+                    + colorama.Style.RESET_ALL
                     )
+                time.sleep(2)
+                print(colorama.Style.RESET_ALL, end="")
             elif suggestion != word:
                 print(f"'{suggestion}' is not the correct word.")
                 remaining_lives -= 1
@@ -374,7 +378,13 @@ def play_round(word):
                     score -= penalty_points
                     print(f"Incorrect word! {penalty_points} points deducted.")
                 else:
-                    print("Incorrect full word guess! Insufficient points.")
+                    print(
+                        colorama.Fore.MAGENTA
+                        + "Incorrect full word guess! Insufficient points."
+                        + colorama.Style.RESET_ALL
+                        )
+                    time.sleep(2)
+                    print(colorama.Style.RESET_ALL, end="")
                     print(f"Score after deduction: {score}")
             else:
                 has_guessed_correctly = True
