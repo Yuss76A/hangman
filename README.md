@@ -108,7 +108,7 @@ If the letter is not in the word, the notification will display in red, indicati
 If a player incorrectly guesses a word, it will be added to a list of incorrect word attempts. This list is displayed to the player, providing a clear record of unfruitful guesses, assisting in formulating future strategies, and preventing repeated attempts.
 
 *Word Guessed*<br>
-![Word Guessed](docs/screenshots/wordguessed.png)
+![Word Guessed](docs/screenshots/incorrectwordguess.png)
 
 ### Guess Validation 
 
@@ -139,7 +139,7 @@ Upon finishing the game, players will receive a completion message that reflects
 This visual sequence serves as a stark contrast to the rewarding save animation and underscores the consequence of failure. Accompanied by the message "You failed to save me, Agent," it enhances the emotional depth of the game by dramatizing the stakes and reinforcing the urgency of the player's mission. Showing the secret word momentarily emphasizes the outcome and reflects on the challenge, making the gameplay experience more immersive and impactful.
 
 *Failure Acknowledgment*<br>
-![Failure Acknowledgment](docs/screenshots/failedmessage.png)
+![Failure Acknowledgment](docs/screenshots/failedword.png)
 
 *Failure Animation*<br>
 ![Failure Animation](docs/screenshots/animationfailure.png)
