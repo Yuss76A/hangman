@@ -414,7 +414,7 @@ def play_round(word):
         print(
             colorama.Fore.YELLOW
             + colorama.Style.BRIGHT
-            + f"The word was: {word} 🏆"  # Adding an emoji for flair
+            + f"The word was: {word} 🏆"
             + colorama.Style.RESET_ALL
             )
         time.sleep(6)
