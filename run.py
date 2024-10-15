@@ -321,8 +321,12 @@ def play_round(word):
             if (suggestion in correct_guesses or
                     suggestion in incorrect_guesses):
                 print(
-                    f"Letter has been guessed '{suggestion}'. Try again."
+                    colorama.Fore.BLUE
+                    + f"Letter has been guessed '{suggestion}'. Try again."
+                    + colorama.Style.RESET_ALL
                     )
+                time.sleep(2)
+                print(colorama.Style.RESET_ALL, end="")
             elif suggestion not in word:
                 print(
                     colorama.Fore.RED
