@@ -291,7 +291,7 @@ def play_round(word):
     This function manages the game logic, including user input,
     score tracking, and game state updates.
     """
-    
+
     score = 0
     points_per_letter = 5
     points_per_word = 20
@@ -332,7 +332,7 @@ def play_round(word):
                     colorama.Fore.RED
                     + f"Unfortunately, '{suggestion}' is not in the word."
                     + colorama.Style.RESET_ALL
-                    )     
+                    )
                 time.sleep(2)
                 print(colorama.Style.RESET_ALL, end="")
                 remaining_lives -= 1
@@ -398,7 +398,7 @@ def play_round(word):
         print(f"Wrong letters guessed: {', '.join(sorted(incorrect_guesses))}")
         print(f"Complete words guessed: {', '.join(guessed_full_words)}", "\n")
         print(f"Current Score: {score}")
-    
+
     if has_guessed_correctly:
         print("Well done! You've successfully saved the hangman!\n")
         print(f"The word was: {word}")

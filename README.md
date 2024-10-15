@@ -214,10 +214,11 @@ Rest assured, agents, that we will continue to closely monitor the Hangman game 
 * The **os** module was employed to manage console interactions, allowing the screen to be cleared dynamically for a cleaner game interface.
 * The **time** module was used to control timing, creating delays for animations and effects to enhance user engagement.
 * The **sys** module facilitated output manipulation, enabling text to display gradually for a typewriter effect, enriching the visual experience.
+* The **colorama** library was employed to apply colored text in the console, providing visual feedback such as green for correct guesses, red for incorrect guesses, blue for already guessed letters, and orange for invalid inputs, thus enhancing user interaction and clarity.
 
 ### Used Colors
 
-* In the progression of the game, various colors are utilized to enhance the user experience and provide immediate visual feedback. A correct guessed letter is highlighted in green, celebrating your success. An incorrect guessed letter appears in red, indicating a wrong choice. Should an invalid input or character be entered, it will be displayed in orange as a helpful prompt to reconsider your input. All other elements retain a neutral white, ensuring that the key interactions remain the focal point.
+* In the progression of the game, various colors are utilized to enhance the user experience and provide immediate visual feedback. A correct guessed letter is highlighted in green, celebrating your success. An incorrect guessed letter appears in red, indicating a wrong choice. If you have already guessed a letter, it will be shown in blue, signaling that you've previously made this choice. Should an invalid input or character be entered, it will be displayed in orange as a helpful prompt to reconsider your input. All other elements retain a neutral white, ensuring that the key interactions remain the focal point.
 
 ## Development and Deployment
 
