@@ -2,7 +2,10 @@ import random
 import os
 import time
 import sys
+import colorama
 from words import word_list
+
+colorama.init()
 
 
 def clear_screen():
@@ -321,10 +324,13 @@ def play_round(word):
                     f"Letter has been guessed '{suggestion}'. Try again."
                     )
             elif suggestion not in word:
-                print(f"\033[91mUnfortunately, '{suggestion}' is "
-                      f"not in the word.")
+                print(
+                    colorama.Fore.RED
+                    + f"Unfortunately, '{suggestion}' is not in the word."
+                    + colorama.Style.RESET_ALL
+                    )     
                 time.sleep(2)
-                print("\r\033[0m", end="")
+                print(colorama.Style.RESET_ALL, end="")
                 remaining_lives -= 1
                 incorrect_guesses.append(suggestion)
                 if score >= penalty_points:
@@ -333,10 +339,13 @@ def play_round(word):
                 else:
                     print("Wrong guess! Not enough points to deduct.")
             else:
-                print(f"\033[92mNice job! '{suggestion}' is "
-                      f"present in the word.")
+                print(
+                    colorama.Fore.GREEN
+                    + f"Nice job! '{suggestion}' is present in the word."
+                    + colorama.Style.RESET_ALL
+                    )
                 time.sleep(2)
-                print("\r\033[0m", end="")
+                print(colorama.Style.RESET_ALL, end="")
                 correct_guesses.append(suggestion)
                 score += points_per_letter
                 word_list = list(masked_word)
@@ -359,7 +368,7 @@ def play_round(word):
                 guessed_full_words.append(suggestion)
                 if score >= penalty_points:
                     score -= penalty_points
-                    print("Incorrect word! {penalty_points} points deducted.")
+                    print(f"Incorrect word! {penalty_points} points deducted.")
                 else:
                     print("Incorrect full word guess! Insufficient points.")
                     print(f"Score after deduction: {score}")
@@ -370,11 +379,13 @@ def play_round(word):
 
         else:
             print(
-                "\033[93mInvalid input. Please guess either a single letter "
+                colorama.Fore.YELLOW
+                + "Invalid input. Please guess either a single letter "
                 "or the full word."
+                + colorama.Style.RESET_ALL
                 )
             time.sleep(2)
-            print("\r\033[0m", end="")
+            print(colorama.Style.RESET_ALL, end="")
 
         print(display_hangman(remaining_lives))
         print(f"The word contains {len(word)} letters.\n")
