@@ -411,14 +411,22 @@ def play_round(word):
 
     if has_guessed_correctly:
         print("Well done! You've successfully saved the hangman!\n")
-        print(f"The word was: {word}")
+        print(
+            colorama.Fore.YELLOW
+            + colorama.Style.BRIGHT
+            + f"The word was: {word} 🏆"  # Adding an emoji for flair
+            + colorama.Style.RESET_ALL
+            )
         time.sleep(6)
         walk_out()
         time.sleep(2)
     else:
         print(
-            f"You failed, Agent. This failure runs deep. "
-            f"The word was '{word}'. Better luck next time.\n"
+            colorama.Fore.MAGENTA
+            + colorama.Style.BRIGHT
+            + f"You failed, Agent. This failure runs deep. "
+            + f"The word was '{word}'. Better luck next time.\n"
+            + colorama.Style.RESET_ALL
             )
         time.sleep(6)
 
