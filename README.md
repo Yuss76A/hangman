@@ -220,7 +220,7 @@ Rest assured, agents, that we will continue to closely monitor the Hangman game 
 
 * In the progression of the game, various colors are utilized to enhance the user experience and provide immediate visual feedback. A correctly guessed letter is highlighted in green, celebrating your success. An incorrect guessed letter appears in red, indicating a wrong choice. If you have already guessed a letter, it will be shown in blue, signaling that you've previously made this choice. Should an invalid input or character be entered, it will be displayed in orange as a helpful prompt to reconsider your input.
 
-Magenta is used to indicate incorrect full guessed words and already guessed words, highlighting these actions distinctly so players can easily identify and avoid repeated mistakes. In instances of failure when revealing the correct word, bright magenta emphasizes the finality of the message, ensuring it stands out. Meanwhile, a bright yellow color is used to highlight success messages, paired with a trophy emoji (🏆) to celebrate uncovering the correct word.
+Light cyan is used to indicate incorrect full guessed words and already guessed words, highlighting these actions distinctly so players can easily identify and avoid repeated mistakes. In instances of failure when revealing the correct word, bright magenta emphasizes the finality of the message, ensuring it stands out. Meanwhile, a bright yellow color is used to highlight success messages, paired with a trophy emoji (🏆) to celebrate uncovering the correct word.
 
 All other elements retain a neutral white, ensuring that the key interactions remain the focal point and are easily distinguishable within the game's interface.
 
