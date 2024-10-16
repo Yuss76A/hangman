@@ -414,13 +414,20 @@ def play_round(word):
             time.sleep(2)
             print(colorama.Style.RESET_ALL, end="")
 
-        print(display_hangman(remaining_lives))
-        print(f"The word contains {len(word)} letters.\n")
-        print(" ".join(masked_word), "\n")
-        print(f"Correct letters guessed: {', '.join(sorted(correct_guesses))}")
-        print(f"Wrong letters guessed: {', '.join(sorted(incorrect_guesses))}")
-        print(f"Complete words guessed: {', '.join(guessed_full_words)}", "\n")
-        print(f"Current Score: {score}")
+        print(f"""
+{display_hangman(remaining_lives)}
+The word contains {len(word)} letters
+
+{" ".join(masked_word)}
+
+Correct letters guessed: {', '.join(sorted(correct_guesses))}
+
+Wrong letters guessed: {', '.join(sorted(incorrect_guesses))}
+
+Complete words guessed: {', '.join(guessed_full_words)}
+
+Current Score: {score}
+        """)
 
     if has_guessed_correctly:
         print("Well done! You've successfully saved the hangman!\n")
@@ -449,7 +456,7 @@ def play_round(word):
 
     clear_screen()
 
-# Entry point of the script
+
 def main():
     codename = display_welcome_message()
     word = get_word()
