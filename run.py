@@ -19,14 +19,6 @@ def clear_screen():
         print("\n" * 100)    
 
 
-def clear_screen():
-    """
-    Clear the console screen.
-    Uses 'cls' command for Windows and 'clear' for Unix-based systems.
-    """
-    os.system('cls' if os.name == 'nt' else 'clear')
-
-
 def typewriter_effect(text, delay=0.01):
     """Simulates a typewriter effect for the given text."""
     for char in text:
