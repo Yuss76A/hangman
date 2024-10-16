@@ -434,6 +434,8 @@ def play_round(word):
 
     ask_to_play_again()
 
+    clear_screen()
+
 # Entry point of the script
 
 
