@@ -10,6 +10,15 @@ colorama.init()
 
 
 def clear_screen():
+    """Clears the console screen.
+
+    This function attempts to clear the console screen using OS-specific commands.
+    On Windows, it uses 'cls'; on Linux and macOS, it uses 'clear'. For other 
+    operating systems or environments where these commands are unavailable (like 
+    some web-based deployments), it prints 100 newline characters to effectively 
+    scroll the previous output off-screen.  Note that the effectiveness of this
+    fallback method might vary depending on the terminal or environment.
+    """
     if platform.system() == "Windows":
         os.system('cls')
     elif platform.system() in ["Linux", "Darwin"]:  # Linux or macOS
