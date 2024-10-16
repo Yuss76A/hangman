@@ -21,7 +21,7 @@ def clear_screen():
     """
     if platform.system() == "Windows":
         os.system('cls')
-    elif platform.system() in ["Linux", "Darwin"]:  # Linux or macOS
+    elif platform.system() in ["Linux", "Darwin"]:  # Linux or macOS1
         os.system('clear')
     else:
         # For other systems (including web-based environments like Heroku)
@@ -278,6 +278,7 @@ def ask_to_play_again():
         if response in ("yes", "y"):
             chosen_word = get_word()
             play_round(chosen_word)
+            clear_screen()
             break
         elif response in ("no", "n"):
             print("Thanks for playing! Goodbye.")
@@ -449,10 +450,12 @@ def play_round(word):
     clear_screen()
 
 # Entry point of the script
-
-
-if __name__ == "__main__":
+def main():
     codename = display_welcome_message()
     word = get_word()
     play_round(word)
     print("Thanks for playing!")
+
+
+if __name__ == "__main__":
+   main()
