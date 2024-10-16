@@ -199,11 +199,13 @@ A thorough check of both the word list and the main program files has been compl
 
 We're pleased to report that during our extensive testing of the Hangman game, we did not encounter any bugs or issues that would impact the overall gameplay experience. The core functionality, including the ability to guess letters, decode the hidden word, and navigate the visual representation of the hangman, has been thoroughly validated and proven to work correctly.
 
-However, it's important to note that the absence of identified bugs in our testing does not guarantee the complete absence of any potential issues. Software development, by its very nature, involves an element of uncertainty, and unforeseen problems can always arise, even in the most well-designed and extensively tested applications.
+However, while our testing revealed no game-breaking bugs, we did identify a minor issue affecting the clear_screen() function.  During testing in the Gitpod terminal, the function worked as expected, but upon deployment to Heroku, it appears to not be clearing the screen consistently. This visual anomaly does not impede gameplay functionality; the game remains fully playable. We are currently investigating the root cause and will deploy a fix to resolve this issue shortly.
 
-Therefore, we want to assure our players that we will remain vigilant and continue to monitor the Hangman game closely for any reports of bugs or unexpected behaviors. If any issues are brought to our attention, either through player feedback or our own ongoing monitoring, we will address them swiftly and efficiently.
+It's important to note that the absence of identified bugs in our testing does not guarantee the complete absence of any potential issues. Software development involves an element of uncertainty, and unforeseen problems can always arise.
 
-Our commitment to delivering a seamless and enjoyable Hangman experience is unwavering. We have carefully implemented all the features and mechanics you would expect in a classic Hangman game, and we are confident that the game functions as intended. But we also recognize that software is a living, evolving entity, and we will remain dedicated to maintaining the highest standards of quality and responsiveness to any concerns that may arise.
+Therefore, we want to assure our players that we will remain vigilant and continue to monitor the Hangman game closely for any reports of bugs or unexpected behaviors.  If any issues are brought to our attention, we will address them swiftly and efficiently.
+
+Our commitment to delivering a seamless and enjoyable Hangman experience is unwavering.  We have carefully implemented all the features and mechanics you would expect in a classic Hangman game, and we are confident that the game functions as intended.  But we also recognize that software is a living, evolving entity, and we will remain dedicated to maintaining the highest standards of quality and responsiveness to any concerns that may arise.
 
 Rest assured, agents, that we will continue to closely monitor the Hangman game and address any bugs or issues that may surface in the future. Your satisfaction and the integrity of the game experience are of the utmost importance to us.
 
@@ -215,6 +217,7 @@ Rest assured, agents, that we will continue to closely monitor the Hangman game 
 * The **time** module was used to control timing, creating delays for animations and effects to enhance user engagement.
 * The **sys** module facilitated output manipulation, enabling text to display gradually for a typewriter effect, enriching the visual experience.
 * The **colorama** library was employed to apply colored text in the console, providing visual feedback such as green for correct guesses, red for incorrect guesses, blue for already guessed letters, and orange for invalid inputs, thus enhancing user interaction and clarity.
+* The **platform** module provides information about the operating system. In the context of the game, it is used in the clear_screen() function to determine which command (cls or clear) to use for clearing the terminal. This ensures that the game behaves correctly regardless of whether it is run on a Windows, MacOS, or Linux system.
 
 ### Used Colors
 
