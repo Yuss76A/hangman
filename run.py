@@ -147,8 +147,15 @@ def fall_from_tree():
 
 def display_welcome_message():
     """
-    Displays the game's introduction and prompts the player for a username.
-    Returns the validated username.
+    Displays the game's introduction and prompts for a validated codename.
+
+    This function presents the Hangman game's introduction text using a typewriter
+    effect.  It then prompts the player to enter a codename, validating that the
+    codename is a single English word between 1 and 10 letters long.  The function
+    continues to prompt for input until a valid codename is provided.
+
+    Returns:
+        str: The validated codename (a single English word, 1-10 letters).
     """
     message = f"""
 \n{'*' * 70}\n
