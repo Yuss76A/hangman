@@ -12,11 +12,12 @@ colorama.init()
 def clear_screen():
     """Clears the console screen.
 
-    This function attempts to clear the console screen using OS-specific commands.
-    On Windows, it uses 'cls'; on Linux and macOS, it uses 'clear'. For other 
-    operating systems or environments where these commands are unavailable (like 
-    some web-based deployments), it prints 100 newline characters to effectively 
-    scroll the previous output off-screen.  Note that the effectiveness of this
+    This function attempts to clear the console screen using OS-specific
+    commands. On Windows, it uses 'cls'; on Linux and macOS, it uses 'clear'.
+    For other operating systems or environments where these commands
+    are unavailable (like some web-based deployments),
+    it prints 100 newline characters to effectively scroll the previous
+    output off-screen.  Note that the effectiveness of this
     fallback method might vary depending on the terminal or environment.
     """
     if platform.system() == "Windows":
@@ -25,7 +26,7 @@ def clear_screen():
         os.system('clear')
     else:
         # For other systems (including web-based environments like Heroku)
-        print("\n" * 100)    
+        print("\n" * 100)
 
 
 def typewriter_effect(text, delay=0.01):
@@ -149,10 +150,11 @@ def display_welcome_message():
     """
     Displays the game's introduction and prompts for a validated codename.
 
-    This function presents the Hangman game's introduction text using a typewriter
-    effect.  It then prompts the player to enter a codename, validating that the
-    codename is a single English word between 1 and 10 letters long.  The function
-    continues to prompt for input until a valid codename is provided.
+    This function presents the Hangman game's introduction text using
+    a typewriter effect. It then prompts the player to enter a codename,
+    validating that the codename is a single English word between
+    1 and 10 letters long. The function continues to prompt for input until
+    a valid codename is provided.
 
     Returns:
         str: The validated codename (a single English word, 1-10 letters).
@@ -467,11 +469,11 @@ Current Score: {score}
 def main():
     """Runs the main game loop of the Hangman game.
 
-    This function serves as the entry point for the Hangman game. It first displays
-    a welcome message and prompts the player to enter a codename. Then, it selects
-    a random word from the word list and starts a round of the game using the 
-    play_round function. Finally, it prints a thank-you message after the game
-    ends.
+     This function serves as the entry point for the Hangman game.
+    It first displays a welcome message and prompts the player to enter
+    a codename. Then, it selects a random word from the word list and starts
+    a round of the game using the play_round function. Finally, it prints
+    a thank-you message after the game ends.
     """
     codename = display_welcome_message()
     word = get_word()
@@ -480,4 +482,4 @@ def main():
 
 
 if __name__ == "__main__":
-   main()
+    main()
