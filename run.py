@@ -458,6 +458,14 @@ Current Score: {score}
 
 
 def main():
+    """Runs the main game loop of the Hangman game.
+
+    This function serves as the entry point for the Hangman game. It first displays
+    a welcome message and prompts the player to enter a codename. Then, it selects
+    a random word from the word list and starts a round of the game using the 
+    play_round function. Finally, it prints a thank-you message after the game
+    ends.
+    """
     codename = display_welcome_message()
     word = get_word()
     play_round(word)
