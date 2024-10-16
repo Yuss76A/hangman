@@ -3,9 +3,20 @@ import os
 import time
 import sys
 import colorama
+import platform
 from words import word_list
 
 colorama.init()
+
+
+def clear_screen():
+    if platform.system() == "Windows":
+        os.system('cls')
+    elif platform.system() in ["Linux", "Darwin"]:  # Linux or macOS
+        os.system('clear')
+    else:
+        # For other systems (including web-based environments like Heroku)
+        print("\n" * 100)    
 
 
 def clear_screen():
