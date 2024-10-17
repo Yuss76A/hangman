@@ -22,10 +22,10 @@ def clear_screen():
     """
     if platform.system() == "Windows":
         os.system('cls')
-    elif platform.system() in ["Linux", "Darwin"]:  # Linux or macOS1
+    elif platform.system() in ["Linux", "Darwin"]:
         os.system('clear')
     else:
-        # For other systems (including web-based environments like Heroku)
+
         print("\n" * 100)
 
 
@@ -55,7 +55,6 @@ def walk_out():
     screen_width = os.get_terminal_size().columns
     screen_height = os.get_terminal_size().lines
 
-    # Calculate the starting and ending positions for the hangman
     start_x = 0
     start_y = int(screen_height / 2) - 2
     end_x = screen_width - len(hangman[0])
@@ -64,7 +63,6 @@ def walk_out():
     for i in range(screen_width // len(hangman[0])):
         clear_screen()
 
-        # Display the success message above the hangman
         success_message = (
             f"The secret agent 003 was saved! Good job, agent!"
         )
@@ -72,12 +70,10 @@ def walk_out():
         col = int(screen_width / 2) - len(success_message) // 2
         print(f"\033[{row};{col}H{success_message}")
 
-        # Display the moving hangman
         for j, line in enumerate(hangman):
             print("\033[{};{}H{}".format(start_y + j, start_x, line))
         time.sleep(0.3)
 
-        # Move the hangman towards the end position
         start_x += len(hangman[0])
         if start_x > end_x:
             break
