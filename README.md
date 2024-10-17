@@ -98,7 +98,7 @@ If the letter is not in the word, the notification will display in red, indicati
 * The color of the notification (red for incorrect, green for correct) will remain at the top of the game interface until you make another guess, ensuring you remember your last guess's outcome.
 
 *Letters Guessed Correctly*<br>
-![Letters Guessed Correctly](docs/screenshots/guessedcorrectly.png)
+![Letters Guessed Correctly](docs/screenshots/correctletterguessed.png)
 
 *Letters Guessed Incorrectly*<br>
 ![Letters Guessed Incorrectly](docs/screenshots/incorrectlyguessed.png)
@@ -129,7 +129,7 @@ Upon finishing the game, players will receive a completion message that reflects
 * The animation sequence provides a rewarding visual experience for players, celebrating their successful effort in saving the agent, symbolized by the hangman figure. When a player correctly guesses the secret word, the hangman animates across the screen, signifying the agent's safe escape. This engaging visual reward adds a lively and gratifying conclusion to the game, making the achievement feel tangible and fun, enhancing the overall enjoyment of playing the game.
 
 *Correctly Gussed Word*<br>
-![Correctly Guessed Word](docs/screenshots/guessedword.png)
+![Correctly Guessed Word](docs/screenshots/gussedword.png)
 
 *Walking out Animation*<br>
 ![Walkin out Animation](docs/screenshots/animationwalking.png)
@@ -139,7 +139,7 @@ Upon finishing the game, players will receive a completion message that reflects
 This visual sequence serves as a stark contrast to the rewarding save animation and underscores the consequence of failure. Accompanied by the message "You failed to save me, Agent," it enhances the emotional depth of the game by dramatizing the stakes and reinforcing the urgency of the player's mission. Showing the secret word momentarily emphasizes the outcome and reflects on the challenge, making the gameplay experience more immersive and impactful.
 
 *Failure Acknowledgment*<br>
-![Failure Acknowledgment](docs/screenshots/failedword.png)
+![Failure Acknowledgment](docs/screenshots/failedgame.png)
 
 *Failure Animation*<br>
 ![Failure Animation](docs/screenshots/animationfailure.png)
