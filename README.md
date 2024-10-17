@@ -312,6 +312,8 @@ This project was deployed on [Heroku](https://www.heroku.com "Heroku") using the
 | Game Outcome Message | Upon game conclusion, message displayed indicating win or loss. | Complete game through win and loss scenarios. | When user wins, congratulatory message should display. When user loses, commiserative message should appear. | Confirmed. |
 | Play Again Prompt | Upon game conclusion, user is asked about playing another round. | Conclude game. | When game completed, prompt should appear allowing user to exit program or start new game. Program should restart if user accepts and terminate if user declines. | Verified. |
 | Play Again Validation | Validate play again response from user. | Provide invalid input to play again prompt. | If user provides invalid input to play again prompt, they should be notified and allowed to input again. | As expected. |
+| Hangman Animation | Correctly animates the hangman walking (success) or falling (failure). | Complete game with both win and loss scenarios. | Animations should play smoothly and correctly reflect game outcome. | Verified
+| Color-Coded Feedback | Provides color-coded feedback (correct/incorrect guesses, etc.) | Make various valid and invalid guesses. | Color codes should correctly reflect the outcome of each guess. | As expected
 
 ## Credits
 
