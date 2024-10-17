@@ -13,9 +13,11 @@ A word related to espionage is randomly selected, with underscores (_) indicatin
 
 Players guess letters or the entire word, aiming to decode the secret word and rescue Agent 003. Ensure that guesses meet English alphabet criteria, with word guesses matching the length of the secret word.
 
-Correct letter guesses replace underscores with the right letters. Each incorrect guess costs a life, bringing the character closer to capture depicted through the 'fall from the tree' sequence.
+Correct letter guesses replace underscores with the right letters. Each incorrect guess costs a life, bringing the character closer to capture depicted through the 'fall from the tree' animation sequence.
 
-Success results in a congratulatory sequence and an option to play again, while failure reveals the word and offers retry encouragement.
+Success results in a congratulatory message followed by a celebratory animation where Agent 003 walks across the screen. This successful rescue is then followed by an option to play again.
+
+Failure reveals the word and the 'fall from the tree' animation sequence,  depicting Agent 003's capture, followed by an option to retry with encouragement.
 
 Repeated guesses on letters previously tried don't incur penalties, guiding players to think strategically.
 
